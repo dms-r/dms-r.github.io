@@ -2,16 +2,14 @@ remote_theme      : pages-themes/hacker@v0.2.0
 plugins           : [jekyll-remote-theme, jekyll-feed]
 
 
-title             : deer-g
-author            : deer?
+title             : dms site
+author            : Dimas R
 lang              : en
 encoding          : utf-8
-show_drafts       : false 
-future            : true
+show_drafts       : false
 port              : 443
 livereload        : true
 exclude           : [_config.yml, _docs, README.md, _drafts]
-show_drafts       : false
 
 defaults:
   - scope:
