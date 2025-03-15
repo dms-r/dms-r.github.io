@@ -3,13 +3,15 @@ author: Dimas
 pubDatetime: 2025-02-03T17:30:00Z
 title: Learn Access Control Vuln in Web Apps
 featured: true
-draft: false
+draft: true
 tags:
   - cybersecurity
   - idor
 description:
   Delve deeper into the technicalities of access control vulnerabilities in web apps.
 ---
+
+// How to start: pnpm run dev
 
 ## Table of contents
 
