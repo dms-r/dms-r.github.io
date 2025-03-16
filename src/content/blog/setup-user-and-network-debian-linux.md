@@ -13,4 +13,4 @@ description:
   Berisikan langkah-langkah dalam mengatur user dan jaringan debian linux
 ---
 
-<iframe style="width: 100%; height: calc(16/9);" src="https://www.youtube.com/embed/n_lVv3aH_Pc?si=0qUpLX2kqOi_414y" allowfullscreen></iframe>
+<iframe style="width: 100%; height: calc(16/9);" src="https://www.youtube.com/embed/e-IEYo1f1Mg?si=bITQYfBUAHKj797q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
