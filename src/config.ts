@@ -5,7 +5,7 @@ export const SITE: Site = {
   author: "Dimas",
   profile: "https://dms-r.github.io/about",
   desc: "",
-  title: "d-privat",
+  title: "d-public",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerIndex: 4,
