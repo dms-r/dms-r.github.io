@@ -1,7 +1,7 @@
 ---
 author: Dimas
 pubDatetime: 2025-03-19T08:50:00Z
-title: Tutorial Hardening Linux
+title: Guide Hardening Linux
 featured: true
 draft: false
 tags:
