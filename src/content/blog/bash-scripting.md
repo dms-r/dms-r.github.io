@@ -2,7 +2,7 @@
 author: Dimas
 pubDatetime: 2025-03-19T09:40:00Z
 title: Guide Bash Scripting on Linux
-featured: true
+featured: false
 draft: false
 tags:
   - linux

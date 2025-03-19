@@ -2,7 +2,7 @@
 author: Dimas
 pubDatetime: 2025-03-15T15:20:00Z
 title: Guide Install Debian Linux
-featured: true
+featured: false
 draft: false
 tags:
   - linux

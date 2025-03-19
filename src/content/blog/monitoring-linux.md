@@ -2,7 +2,7 @@
 author: Dimas
 pubDatetime: 2025-03-19T19:20:00Z
 title: Guide Monitoring & Troubleshooting Linux
-featured: true
+featured: false
 draft: false
 tags:
   - linux

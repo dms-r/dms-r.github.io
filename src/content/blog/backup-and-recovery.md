@@ -2,7 +2,7 @@
 author: Dimas
 pubDatetime: 2025-03-19T10:20:00Z
 title: Guide Backup & Disaster Recovery Linux
-featured: true
+featured: false
 draft: false
 tags:
   - linux
