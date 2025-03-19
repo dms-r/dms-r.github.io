@@ -9,7 +9,7 @@ tags:
   - debian
   - video
 description:
-  Berisikan video praktik mengatur user dan jaringan di debian linux
+  Berisikan video praktik mengatur user dan jaringan di debian linux.
 ---
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/e-IEYo1f1Mg?si=bITQYfBUAHKj797q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

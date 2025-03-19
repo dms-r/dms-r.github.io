@@ -9,7 +9,7 @@ tags:
   - security
   - text
 description:
-  Berisikan tutorial teknis singkat tentang hardening linux
+  Berisikan panduan teknis singkat tentang hardening linux.
 ---
 
 ## Table of contents

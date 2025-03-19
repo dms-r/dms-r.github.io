@@ -1,7 +1,7 @@
 ---
 author: Dimas
 pubDatetime: 2025-03-19T09:25:00Z
-title: Guide User & Access Management
+title: Guide User & Access Management on Linux
 featured: true
 draft: false
 tags:
@@ -9,12 +9,10 @@ tags:
   - security
   - text
 description:
-  Berisikan tutorial teknis singkat tentang mengatur user dan aksesnya
+  Berisikan panduan teknis singkat tentang cara mengatur user dan aksesnya.
 ---
 
 ## Table of contents
-
-# **User & Access Management di Linux**  
 
 **User & Access Management** adalah salah satu aspek penting dalam administrasi Linux yang bertujuan untuk:  
 ✅ Mengontrol siapa saja yang bisa masuk ke sistem.  
