@@ -1,7 +1,7 @@
 ---
 author: Dimas
 pubDatetime: 2025-03-19T10:20:00Z
-title: Guide Backup & Disaster Recovery
+title: Guide Backup & Disaster Recovery Linux
 featured: true
 draft: false
 tags:
@@ -17,7 +17,7 @@ description:
 
 Backup dan Disaster Recovery (BDR) adalah strategi penting dalam administrasi sistem Linux untuk melindungi data dan memastikan layanan tetap berjalan meskipun terjadi kegagalan sistem.  
 
-## **🔹 1. Strategi Backup & Disaster Recovery**  
+## **1. Strategi Backup & Disaster Recovery**  
 💾 **Backup:** Salinan data untuk pemulihan jika terjadi kehilangan.  
 🛑 **Disaster Recovery:** Rencana untuk memulihkan sistem jika terjadi kegagalan besar.  
 
@@ -28,7 +28,7 @@ Backup dan Disaster Recovery (BDR) adalah strategi penting dalam administrasi si
 
 ---
 
-## **🔹 2. Konfigurasi `rsync` untuk Backup**  
+## **2. Konfigurasi `rsync` untuk Backup**  
 `rsync` adalah tool di Linux yang digunakan untuk sinkronisasi file dan backup data.  
 
 ### **📌 Cara Kerja `rsync`**  
@@ -64,7 +64,7 @@ Tambahkan baris ini untuk backup setiap malam pukul 02:00:
 
 ---
 
-## **🔹 3. Snapshot untuk Backup Instan (LVM & Btrfs)**  
+## **3. Snapshot untuk Backup Instan (LVM & Btrfs)**  
 Snapshot adalah metode backup cepat yang menyimpan **salinan instan** dari data tanpa menyalin ulang seluruh isi disk.  
 
 ### **📌 Snapshot dengan LVM (Logical Volume Manager)**  
@@ -99,7 +99,7 @@ btrfs subvolume snapshot /backup/snapshot_2024-03-19 /data
 
 ---
 
-## **🔹 4. RAID (Redundant Array of Independent Disks)**
+## **4. RAID (Redundant Array of Independent Disks)**
 RAID digunakan untuk meningkatkan **keamanan dan performa** penyimpanan dengan mengombinasikan beberapa disk.  
 
 ### **📌 Tipe RAID Populer**  
@@ -135,7 +135,7 @@ sudo mount /dev/md0 /mnt/raid1
 
 ---
 
-## **🔹 5. Failover System – High Availability (HA)**  
+## **5. Failover System – High Availability (HA)**  
 Failover system memastikan layanan tetap berjalan meskipun terjadi kegagalan server atau hardware.  
 
 ### **📌 Metode Failover System**  
