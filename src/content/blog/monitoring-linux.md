@@ -13,6 +13,8 @@ description:
   Berisikan panduan teknis singkat tentang metode monitoring dan cara mengatasi beberapa masalah.
 ---
 
+## Table of contents
+
 **Monitoring server** adalah proses mengawasi performa dan kesehatan sistem secara real-time untuk memastikan layanan berjalan optimal dan mendeteksi masalah sebelum menjadi kritis.  
 
 ## **🔹 Mengapa Monitoring Server Penting?**  
