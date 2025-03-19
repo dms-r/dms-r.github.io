@@ -34,7 +34,7 @@ export const LOGO_IMAGE = {
 export const SOCIALS: SocialObjects = [
   {
     name: "Github",
-    href: "https://github.com/dms-r/dms-r.github.io",
+    href: "https://github.com/dms-r/",
     linkTitle: ` ${SITE.author} on Github`,
     active: true,
   },
