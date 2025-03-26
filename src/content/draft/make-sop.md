@@ -3,7 +3,7 @@ author: Dimas
 pubDatetime: 2025-03-19T20:20:00Z
 title: Guide Preparing Technical Documentation
 featured: false
-draft: false
+draft: true
 tags:
   - linux
   - rules
@@ -150,16 +150,23 @@ Dokumentasi troubleshooting adalah **panduan yang berisi masalah umum, penyebab,
 6️⃣ **Referensi & Sumber Dokumentasi Tambahan**  
 
 📌 **Contoh Dokumentasi Troubleshooting**  
-- **Masalah**: Apache Tidak Bisa Start (Port 80 Sudah Digunakan)
-- **Deskripsi**:Apache gagal berjalan karena port 80 sudah digunakan oleh aplikasi lain.
-- **Lingkungan**:
-    - OS: Ubuntu 20.04
-    - Apache: 2.4.52
-- **Penyebab**:
-    - Port 80 sedang digunakan oleh layanan lain (misalnya Nginx atau aplikasi lain).
-    - Kesalahan konfigurasi VirtualHost.
+```
+# Masalah: Apache Tidak Bisa Start (Port 80 Sudah Digunakan)
 
-- **Langkah Troubleshooting**:
+## Deskripsi:
+Apache gagal berjalan karena port 80 sudah digunakan oleh aplikasi lain.
+
+## Lingkungan:
+- OS: Ubuntu 20.04
+- Apache: 2.4.52
+
+## Penyebab:
+- Port 80 sedang digunakan oleh layanan lain (misalnya Nginx atau aplikasi lain).
+- Kesalahan konfigurasi VirtualHost.
+
+## Langkah Troubleshooting:
+```
+
 1. Periksa port yang digunakan:
    ```
    sudo netstat -tulnp | grep 80

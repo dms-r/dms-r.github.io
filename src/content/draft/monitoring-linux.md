@@ -3,7 +3,7 @@ author: Dimas
 pubDatetime: 2025-03-19T19:20:00Z
 title: Guide Monitoring & Troubleshooting Linux
 featured: false
-draft: false
+draft: true
 tags:
   - linux
   - monitoring

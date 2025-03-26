@@ -3,7 +3,7 @@ author: Dimas
 pubDatetime: 2025-03-19T10:20:00Z
 title: Guide Backup & Disaster Recovery Linux
 featured: false
-draft: false
+draft: true
 tags:
   - linux
   - automation

@@ -2,12 +2,11 @@
 author: Dimas
 pubDatetime: 2025-03-19T08:50:00Z
 title: Guide Hardening Linux
-featured: true
+featured: false
 draft: false
 tags:
   - linux
-  - security
-  - text
+  - bahasa
 description:
   Berisikan panduan teknis singkat tentang hardening linux.
 ---
