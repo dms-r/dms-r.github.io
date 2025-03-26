@@ -3,7 +3,7 @@ author: Dimas
 pubDatetime: 2025-03-19T20:20:00Z
 title: Guide Preparing Technical Documentation
 featured: false
-draft: true
+draft: false
 tags:
   - linux
   - rules

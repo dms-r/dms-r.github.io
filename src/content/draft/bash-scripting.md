@@ -3,7 +3,7 @@ author: Dimas
 pubDatetime: 2025-03-19T09:40:00Z
 title: Guide Bash Scripting on Linux
 featured: false
-draft: true
+draft: false
 tags:
   - linux
   - automation
