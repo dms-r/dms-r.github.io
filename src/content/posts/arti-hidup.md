@@ -3,7 +3,7 @@ title: Arti Hidup
 published: 2025-04-21
 description: 'Apakah hidup ini memiliki arti?'
 image: 'https://miro.medium.com/v2/resize:fit:720/format:webp/0*cWetqRQMYJ509Aij'
-tags: [Filsafat]
+tags: [Filsafat, Hidup]
 category: 'Bahasa Indonesia'
 draft: false 
 lang: 'id'
