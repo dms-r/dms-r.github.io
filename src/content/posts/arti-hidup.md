@@ -9,6 +9,8 @@ draft: false
 lang: 'id'
 ---
 
+> *Cover image source*: [*Source*](https://unsplash.com/photos/silhouette-photography-of-person-oMpAz-DN-9I)
+
 Kita sering mendengar kalimat “hidup ini harus punya tujuan”. Tapi semakin sering dipikir, semakin absurd rasanya. Apa benar kita semua lahir untuk sebuah "misi besar"? Apa benar hidup ini harus selalu diarahkan ke sesuatu yang megah dan penting?
 
 Makna hidup, katanya, adalah sesuatu yang harus ditemukan. Tapi bagaimana kalau setelah dicari-cari, jawabannya justru tidak ada? Bagaimana kalau semua ini, ya… cuma terjadi saja? Mungkin itu terdengar pesimis. Tapi mari kita pikirkan ulang, tanpa terburu-buru menolak kesimpulan yang tidak nyaman.

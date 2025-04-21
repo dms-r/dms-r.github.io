@@ -9,6 +9,9 @@ draft: false
 lang: 'id'
 ---
 
+> *Cover image source*: [*Source*](https://unsplash.com/photos/woman-wearing-academic-cap-and-dress-selective-focus-photography-1VqHRwxcCCw)
+
+
 Lulus SMA **seharusnya** jadi momen paling lega sekaligus menyenangkan. Bebas dari tugas harian, ulangan mendadak, dan suara bel sekolah yang kadang bikin trauma karena PR belum selesai. Tapi, nyatanya nggak semua orang langsung *happy*. Justru banyak yang malah ngerasa 'kosong'? Bingung?. “Abis ini harus ngapain?” Dan itu bukan cuma kamu kok. Kayanya banyak banget yang ngerasa sama.
 
 Bingung setelah lulus SMA itu sepertinya lumrah. Karena kita baru aja lepas dari sistem yang udah ngatur hidup kita dari jam masuk sampai mata pelajaran apa yang harus dipelajari. Tiba-tiba ditodong pilihan: kuliah, kerja, atau mungkin *gap year*? Semua keputusan terasa besar, berat, dan terburu-buru, dan yang bikin pusing—nggak ada jawaban yang pasti benar.
