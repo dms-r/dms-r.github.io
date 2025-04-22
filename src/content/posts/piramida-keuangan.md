@@ -2,7 +2,7 @@
 title: Piramida Keuangan 
 published: 2025-04-21
 description: 'Intinya ilmu prioritas uang'
-image: 'https://miro.medium.com/v2/resize:fit:720/format:webp/0*LxKVgaI51TtQB3IV'
+image: 'https://miro.medium.com/v2/resize:fit:480/format:webp/0*LxKVgaI51TtQB3IV'
 tags: [Keuangan]
 category: 'Bahasa Indonesia'
 draft: false 

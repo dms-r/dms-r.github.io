@@ -2,7 +2,7 @@
 title: Bingung Saat Lulus SMA
 published: 2025-04-21
 description: 'Wajarkah kalau kamu bingung?'
-image: 'https://miro.medium.com/v2/resize:fit:720/format:webp/0*YCuzmNxxSQNcJkHz'
+image: 'https://miro.medium.com/v2/resize:fit:480/format:webp/0*YCuzmNxxSQNcJkHz'
 tags: [Filsafat, SMA]
 category: 'Bahasa Indonesia'
 draft: false 
