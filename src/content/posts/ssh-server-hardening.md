@@ -9,7 +9,7 @@ draft: false
 lang: 'en'
 ---
 
-Top 25 OpenSSH Server Best Security Practices
+> *Cover image source*: [*Source*](https://unsplash.com/photos/cable-network-M5tzZtFCOfs)
 
 SSH is like that one reliable friend you trust with your house keys. It's the backbone of remote access in the UNIX world. Whether you're managing a fleet of servers or babysitting a single VPS, chances are you’re relying on OpenSSH to get the job done.
 
