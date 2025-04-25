@@ -19,13 +19,13 @@ Makna hidup, katanya, adalah sesuatu yang harus ditemukan. Tapi bagaimana kalau 
 
 Kalau ditarik jauh ke belakang—lahir, tumbuh, sekolah, kerja, menikah (mungkin), tua, lalu mati. Rangkaian ini sering dianggap sebagai “jalan normal”. Tapi apakah itu artinya hidup? Atau cuma pola berulang yang kita warisi?
 
-Ada masa di mana aku bangun pagi hanya karena harus. Pergi ke sekolah atau kantor bukan karena ingin, tapi karena takut akan konsekuensi jika tidak. Mengerjakan tugas demi nilai, bukan demi pemahaman. Mencari uang bukan untuk hidup, tapi supaya terlihat seperti "orang yang berhasil". Hidup jadi semacam pertunjukan—penonton ada, naskah ada, tapi aktornya sering kali tersesat.
+Ada masa di mana saya bangun pagi hanya karena harus. Pergi ke sekolah atau kantor bukan karena ingin, tapi karena takut akan konsekuensi jika tidak. Mengerjakan tugas demi nilai, bukan demi pemahaman. Mencari uang bukan untuk hidup, tapi supaya terlihat seperti "orang yang berhasil". Hidup jadi semacam pertunjukan—penonton ada, naskah ada, tapi aktornya sering kali tersesat.
 
 Kita diberi daftar hal-hal yang *katanya* penting: nilai, jabatan, pasangan, rumah. Tapi saat semua itu tercapai, kenapa masih ada rasa kosong? Seperti habis menonton film panjang yang ending-nya biasa saja. Capek iya, puas belum tentu.
 
 Beberapa orang merasa gagal karena tidak punya tujuan hidup yang "jelas". Padahal bisa jadi hidup memang tidak punya tujuan, dan itu bukan kegagalan. Itu justru kebebasan.
 
-Pernah satu malam aku duduk diam, sendirian. Tidak ada musik, tidak ada distraksi. Hanya aku dan bunyi detak jam dinding. Dan entah kenapa, saat itulah terasa paling jujur—bahwa tidak ada yang benar-benar harus dilakukan. Tidak ada yang harus dikejar. Rasanya lega, sekaligus menakutkan.
+Pernah satu malam saya duduk diam, sendirian. Tidak ada musik, tidak ada distraksi. Hanya saya dan bunyi detak jam dinding. Dan entah kenapa, saat itulah terasa paling jujur—bahwa tidak ada yang benar-benar harus dilakukan. Tidak ada yang harus dikejar. Rasanya lega, sekaligus menakutkan.
 
 Jika hidup tidak punya arti dari sananya, artinya kitalah yang bebas mengisinya. Tapi juga bebas membiarkannya kosong. Sama seperti kertas putih. Tidak semua harus jadi lukisan. Kadang cuma jadi tempat coret-coretan pun sudah cukup.
 

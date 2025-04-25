@@ -18,9 +18,9 @@ Bingung setelah lulus SMA itu sepertinya lumrah. Karena kita baru aja lepas dari
 
 ---
 
-Waktu aku menjelang lulus, aku juga menganggap semua orang udah punya rencana hidup. Kayak, yang satu udah keterima di kampus impian, yang lain udah mulai cari temen buat daftar pekerjaan. Aku? Masih meratapi keterampilan yang masih ala kadarnya dibanding temen lain yang profesional, bahkan terkadang masih nanya ke diri sendiri: “Sebenernya, gue mau jadi apa sih?”. Dan jujur, ngerasa ketinggalan banget.
+Waktu saya menjelang lulus, saya juga menganggap semua orang udah punya rencana hidup. Kayak, yang satu udah keterima di kampus impian, yang lain udah mulai cari temen buat daftar pekerjaan. Saya? Masih meratapi keterampilan yang masih ala kadarnya dibanding temen lain yang profesional, bahkan terkadang masih nanya ke diri sendiri: “Sebenernya, gue mau jadi apa sih?”. Dan jujur, ngerasa ketinggalan banget.
 
-Kebingungan ini datang karena selama 12 tahun, hidup kita selalu diarahkan. Kita nggak dikasih waktu buat mikir, aku tuh sukanya apa?” atau “Apa yang bikin aku semangat bangun pagi?” Sekarang, ketika semua pertanyaan itu datang sekaligus, kepala rasanya kayak kondisi tutupan kereta api di jam pulang kerja.
+Kebingungan ini datang karena selama 12 tahun, hidup kita selalu diarahkan. Kita nggak dikasih waktu buat mikir, saya tuh sukanya apa?” atau “Apa yang bikin saya semangat bangun pagi?” Sekarang, ketika semua pertanyaan itu datang sekaligus, kepala rasanya kayak kondisi tutupan kereta api di jam pulang kerja.
 
 Belum lagi tekanan dari sekitar. Orang tua nanya, tetangga nyinyir, teman-teman share kerjaan dan kulishanya di tongkrongan. Kita ngerasa harus cepet-cepet “jadi sesuatu”, padahal kita sendiri belum yakin apa yang kita mau. Kadang, terlalu banyak pilihan malah bikin kita sperti lumpuh.
 
