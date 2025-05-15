@@ -1,0 +1,9 @@
+remote_theme: "mmistakes/minimal-mistakes@4.27.1"
+plugins:
+  - jekyll-relative-links
+  - jekyll-remote-theme
+relative_links:
+  enabled: true
+  collections: true
+
+permalink: pretty
