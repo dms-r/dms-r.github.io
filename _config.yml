@@ -67,13 +67,13 @@ reCaptcha:
   siteKey                :
   secret                 :
 atom_feed:
-  path                   : # blank (default) uses feed.xml
+  path                   : feed.xml # blank (default) uses feed.xml
   hide                   : true # false (default)
-search                   : true # false (default)
-search_full_content      : true # false (default)
+search                   : #true # false (default)
+search_full_content      : #true # false (default)
 search_provider          : # lunr (default), algolia, google
 lunr:
-  search_within_pages    : true # false (default)
+  search_within_pages    : #true # false (default)
 algolia:
   application_id         : # YOUR_APPLICATION_ID
   index_name             : # YOUR_INDEX_NAME
@@ -125,7 +125,7 @@ author:
       url: "mailto:dimasr@duck.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      url: "{{% site.url %}}"
+      url: "https://dms-r.github.io/"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
