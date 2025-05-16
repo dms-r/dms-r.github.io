@@ -150,7 +150,10 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      url: https://github.com/dms-r
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:dimasr@duck.com"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
@@ -230,7 +233,7 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Asia/Jakarta # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Pagination with jekyll-paginate
@@ -319,9 +322,10 @@ compress_html:
 defaults:
   # _posts
   - scope:
-      path: ""
+      path: "_posts"
       type: posts
     values:
+      toc: true
       show_date: true
       layout: single
       author_profile: true
@@ -330,3 +334,22 @@ defaults:
       share: true
       related: true
       date_format: "%Y-%m-%d"
+
+defaults:
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+
+defaults:
+  # _project
+  - scope:
+      path: "_project"
+      type: project
+    values:
+      layout: splash
+
+
+
