@@ -1,8 +1,3 @@
----
-layout: none
-permalink: /robots.txt
----
-
 User-agent: *
 Allow: /
 
