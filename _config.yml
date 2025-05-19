@@ -68,7 +68,7 @@ reCaptcha:
   secret                 : 
 atom_feed:
   path                   : feed.xml # blank (default) uses feed.xml
-  hide                   : false # false (default)
+  hide                   : true # false (default)
 search                   : true # false (default)
 search_full_content      : true # false (default)
 search_provider          : lunr # lunr (default), algolia, google
@@ -115,14 +115,14 @@ analytics:
 # Site Author
 author:
   name             : "Dimas R"
-  avatar           : https://avatars.githubusercontent.com/u/174266241?v=4 # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "https://avatars.githubusercontent.com/u/174266241?v=4" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Just students."
   location         : "Indonesia"
   email            : dimasr@duck.com
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:dimasr@duck.com"
+    # - label: "Email"
+    #   icon: "fas fa-fw fa-envelope-square"
+    #   url: "mailto:dimasr@duck.com"
     - label: "Github"
       icon: "fas fa-fw fa-link"
       # url: "https://dms-r.github.io/"
@@ -331,7 +331,7 @@ defaults:
     values:
       toc: true
       show_date: true
-      layout: single
+      layout: posts
       author_profile: true
       read_time: true
       comments: # true
@@ -350,7 +350,7 @@ defaults:
 defaults:
   # _project
   - scope:
-      path: "_project"
+      path: "_projects"
       type: project
     values:
       layout: splash

@@ -1,0 +1,849 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-05-19T15:13:53+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">dms-r.github.io</title><subtitle>Personal website.</subtitle><author><name>Dimas R</name><email>dimasr@duck.com</email></author><entry><title type="html">Complete Java Learning Guide for High School Students</title><link href="http://localhost:4000/posts/java-learning-guide/" rel="alternate" type="text/html" title="Complete Java Learning Guide for High School Students" /><published>2000-01-30T00:00:00+07:00</published><updated>2000-01-30T00:00:00+07:00</updated><id>http://localhost:4000/posts/java-learning-guide</id><content type="html" xml:base="http://localhost:4000/posts/java-learning-guide/"><![CDATA[<h2 id="chapter-1-basic-syntax---your-first-steps-in-java">Chapter 1: Basic Syntax - Your First Steps in Java</h2>
+
+<h3 id="understanding-what-java-is">Understanding What Java Is</h3>
+<p>Java is like a universal language that computers can understand. Just as you need proper grammar and vocabulary to write an essay, you need to follow specific rules (syntax) to write Java programs. Think of Java syntax as the “grammar rules” of programming.</p>
+
+<h3 id="your-first-java-program">Your First Java Program</h3>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// This is a simple Java program that displays a message</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">HelloWorld</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Hello, World!"</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Let’s break this down piece by piece:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">public class HelloWorld</code>: This creates a container called a “class” named HelloWorld. Every Java program needs at least one class.</li>
+  <li><code class="language-plaintext highlighter-rouge">public static void main(String[] args)</code>: This is the main method where your program starts running. Think of it as the entrance door to your program.</li>
+  <li><code class="language-plaintext highlighter-rouge">System.out.println("Hello, World!");</code>: This tells the computer to display the message “Hello, World!” on the screen.</li>
+</ul>
+
+<h3 id="essential-syntax-rules">Essential Syntax Rules</h3>
+<p>Java follows strict rules, much like writing a formal letter. Here are the key rules:</p>
+
+<ol>
+  <li><strong>Case Sensitivity</strong>: Java distinguishes between uppercase and lowercase letters. <code class="language-plaintext highlighter-rouge">Hello</code> and <code class="language-plaintext highlighter-rouge">hello</code> are different.</li>
+  <li><strong>Semicolons</strong>: Every statement ends with a semicolon (;), like how sentences end with periods.</li>
+  <li><strong>Curly Braces</strong>: Use { } to group related code together, like paragraphs in an essay.</li>
+  <li><strong>Comments</strong>: Use // for single-line comments or /* */ for multi-line comments to explain your code.</li>
+</ol>
+
+<h3 id="practice-exercise">Practice Exercise</h3>
+<p>Try creating a program that prints your name and favorite hobby. This helps you get comfortable with the basic structure.</p>
+
+<hr />
+
+<h2 id="chapter-2-lifecycle-of-a-program---how-java-programs-work">Chapter 2: Lifecycle of a Program - How Java Programs Work</h2>
+
+<h3 id="the-journey-from-code-to-execution">The Journey from Code to Execution</h3>
+<p>Understanding how Java programs work is like understanding how a recipe becomes a meal. Let’s trace this journey:</p>
+
+<ol>
+  <li><strong>Writing the Code</strong>: You write your program in a text file with a .java extension</li>
+  <li><strong>Compilation</strong>: The Java compiler (javac) converts your human-readable code into bytecode (.class files)</li>
+  <li><strong>Execution</strong>: The Java Virtual Machine (JVM) runs the bytecode on your computer</li>
+</ol>
+
+<h3 id="why-this-process-matters">Why This Process Matters</h3>
+<p>This two-step process (compile then run) is what makes Java special. The bytecode can run on any computer that has Java installed, making Java “platform-independent.” It’s like having a universal translator for different operating systems.</p>
+
+<h3 id="example-of-the-complete-process">Example of the Complete Process</h3>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Save this as Calculator.java</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Calculator</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">+</span> <span class="mi">3</span><span class="o">;</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"The answer is: "</span> <span class="o">+</span> <span class="n">result</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>To run this program:</p>
+<ol>
+  <li>Save the file as “Calculator.java”</li>
+  <li>Compile: <code class="language-plaintext highlighter-rouge">javac Calculator.java</code></li>
+  <li>Run: <code class="language-plaintext highlighter-rouge">java Calculator</code></li>
+</ol>
+
+<h3 id="understanding-memory-usage">Understanding Memory Usage</h3>
+<p>When your program runs, Java manages memory automatically through a process called “garbage collection.” Think of it like having an automatic cleaning service that throws away things you no longer need.</p>
+
+<hr />
+
+<h2 id="chapter-3-data-types---the-building-blocks-of-information">Chapter 3: Data Types - The Building Blocks of Information</h2>
+
+<h3 id="what-are-data-types">What Are Data Types?</h3>
+<p>Data types are like different containers for storing different kinds of information. Just as you wouldn’t store milk in a jewelry box, you need the right container for different types of data.</p>
+
+<h3 id="primitive-data-types">Primitive Data Types</h3>
+<p>These are the basic building blocks, like individual LEGO pieces:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Integer types - for whole numbers</span>
+<span class="kt">byte</span> <span class="n">smallNumber</span> <span class="o">=</span> <span class="mi">100</span><span class="o">;</span>        <span class="c1">// -128 to 127</span>
+<span class="kt">short</span> <span class="n">mediumNumber</span> <span class="o">=</span> <span class="mi">30000</span><span class="o">;</span>    <span class="c1">// -32,768 to 32,767</span>
+<span class="kt">int</span> <span class="n">regularNumber</span> <span class="o">=</span> <span class="mi">1000000</span><span class="o">;</span>   <span class="c1">// About -2 billion to 2 billion</span>
+<span class="kt">long</span> <span class="n">bigNumber</span> <span class="o">=</span> <span class="mi">9876543210L</span><span class="o">;</span>  <span class="c1">// Very large numbers (note the L)</span>
+
+<span class="c1">// Floating-point types - for decimal numbers</span>
+<span class="kt">float</span> <span class="n">decimalNumber</span> <span class="o">=</span> <span class="mf">3.14f</span><span class="o">;</span>   <span class="c1">// Single precision (note the f)</span>
+<span class="kt">double</span> <span class="n">preciseDecimal</span> <span class="o">=</span> <span class="mf">3.141592653589793</span><span class="o">;</span> <span class="c1">// Double precision</span>
+
+<span class="c1">// Character and boolean</span>
+<span class="kt">char</span> <span class="n">letter</span> <span class="o">=</span> <span class="sc">'A'</span><span class="o">;</span>             <span class="c1">// Single character</span>
+<span class="kt">boolean</span> <span class="n">isTrue</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>         <span class="c1">// true or false only</span>
+</code></pre></div></div>
+
+<h3 id="string---text-data">String - Text Data</h3>
+<p>Strings are sequences of characters, like words or sentences:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">greeting</span> <span class="o">=</span> <span class="s">"Hello, how are you?"</span><span class="o">;</span>
+<span class="nc">String</span> <span class="n">name</span> <span class="o">=</span> <span class="s">"Alice"</span><span class="o">;</span>
+<span class="nc">String</span> <span class="n">empty</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>  <span class="c1">// An empty string</span>
+</code></pre></div></div>
+
+<h3 id="choosing-the-right-data-type">Choosing the Right Data Type</h3>
+<p>Think of data types like choosing the right tool for a job:</p>
+<ul>
+  <li>Use <code class="language-plaintext highlighter-rouge">int</code> for counting things (age, quantity)</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">double</code> for measurements (height, weight, price)</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">String</code> for text (names, addresses)</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">boolean</code> for yes/no questions (isStudentPresent, hasLicense)</li>
+</ul>
+
+<h3 id="memory-considerations">Memory Considerations</h3>
+<p>Different data types use different amounts of memory. It’s like choosing between a small box and a large box - use what you need, but don’t waste space.</p>
+
+<hr />
+
+<h2 id="chapter-4-variables-and-scopes---storing-and-managing-data">Chapter 4: Variables and Scopes - Storing and Managing Data</h2>
+
+<h3 id="what-are-variables">What Are Variables?</h3>
+<p>Variables are like labeled boxes where you store information. Once you put something in the box, you can use it later by referring to its label.</p>
+
+<h3 id="declaring-and-initializing-variables">Declaring and Initializing Variables</h3>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Declaration - creating the box</span>
+<span class="kt">int</span> <span class="n">age</span><span class="o">;</span>
+
+<span class="c1">// Initialization - putting something in the box</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">17</span><span class="o">;</span>
+
+<span class="c1">// Declaration and initialization together</span>
+<span class="kt">int</span> <span class="n">height</span> <span class="o">=</span> <span class="mi">180</span><span class="o">;</span>
+<span class="nc">String</span> <span class="n">studentName</span> <span class="o">=</span> <span class="s">"John Doe"</span><span class="o">;</span>
+<span class="kt">boolean</span> <span class="n">isEnrolled</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
+</code></pre></div></div>
+
+<h3 id="naming-conventions">Naming Conventions</h3>
+<p>Variable names should be descriptive and follow these rules:</p>
+<ul>
+  <li>Start with a letter, underscore, or dollar sign</li>
+  <li>Can contain letters, numbers, underscores, and dollar signs</li>
+  <li>Cannot be Java keywords (like <code class="language-plaintext highlighter-rouge">public</code>, <code class="language-plaintext highlighter-rouge">class</code>, <code class="language-plaintext highlighter-rouge">int</code>)</li>
+  <li>Use camelCase for multi-word names: <code class="language-plaintext highlighter-rouge">firstName</code>, <code class="language-plaintext highlighter-rouge">studentAge</code>, <code class="language-plaintext highlighter-rouge">isCompleted</code></li>
+</ul>
+
+<h3 id="understanding-scope">Understanding Scope</h3>
+<p>Scope determines where in your program a variable can be used. Think of it like rooms in a house:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ScopeExample</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">classVariable</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span>  <span class="c1">// Can be used anywhere in this class</span>
+    
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">localVariable</span> <span class="o">=</span> <span class="mi">20</span><span class="o">;</span>  <span class="c1">// Can only be used in main method</span>
+        
+        <span class="k">if</span> <span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
+            <span class="kt">int</span> <span class="n">blockVariable</span> <span class="o">=</span> <span class="mi">30</span><span class="o">;</span>  <span class="c1">// Can only be used in this if block</span>
+            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">blockVariable</span><span class="o">);</span>  <span class="c1">// This works</span>
+        <span class="o">}</span>
+        
+        <span class="c1">// System.out.println(blockVariable);  // Error! blockVariable not accessible here</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="types-of-variables">Types of Variables</h3>
+<ol>
+  <li><strong>Local Variables</strong>: Declared inside methods, like items in your backpack</li>
+  <li><strong>Instance Variables</strong>: Belong to an object, like features of a car</li>
+  <li><strong>Class Variables</strong>: Shared by all instances, like school rules that apply to all students</li>
+</ol>
+
+<hr />
+
+<h2 id="chapter-5-type-casting---converting-between-data-types">Chapter 5: Type Casting - Converting Between Data Types</h2>
+
+<h3 id="what-is-type-casting">What Is Type Casting?</h3>
+<p>Type casting is like converting measurements - changing from one unit to another. Sometimes this happens automatically, sometimes you need to do it manually.</p>
+
+<h3 id="implicit-casting-automatic">Implicit Casting (Automatic)</h3>
+<p>Java automatically converts smaller data types to larger ones:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">wholeNumber</span> <span class="o">=</span> <span class="mi">100</span><span class="o">;</span>
+<span class="kt">double</span> <span class="n">decimalNumber</span> <span class="o">=</span> <span class="n">wholeNumber</span><span class="o">;</span>  <span class="c1">// int automatically becomes double</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">decimalNumber</span><span class="o">);</span>   <span class="c1">// Prints 100.0</span>
+</code></pre></div></div>
+
+<h3 id="explicit-casting-manual">Explicit Casting (Manual)</h3>
+<p>When converting from larger to smaller types, you must explicitly cast:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">double</span> <span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14159</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">approximatePi</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="n">pi</span><span class="o">;</span>  <span class="c1">// Explicitly cast double to int</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">approximatePi</span><span class="o">);</span>  <span class="c1">// Prints 3 (decimal part lost)</span>
+</code></pre></div></div>
+
+<h3 id="string-conversions">String Conversions</h3>
+<p>Converting between strings and numbers:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Number to String</span>
+<span class="kt">int</span> <span class="n">number</span> <span class="o">=</span> <span class="mi">42</span><span class="o">;</span>
+<span class="nc">String</span> <span class="n">numberAsString</span> <span class="o">=</span> <span class="nc">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">number</span><span class="o">);</span>
+<span class="c1">// or</span>
+<span class="nc">String</span> <span class="n">anotherWay</span> <span class="o">=</span> <span class="s">""</span> <span class="o">+</span> <span class="n">number</span><span class="o">;</span>
+
+<span class="c1">// String to Number</span>
+<span class="nc">String</span> <span class="n">textNumber</span> <span class="o">=</span> <span class="s">"123"</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">convertedNumber</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">textNumber</span><span class="o">);</span>
+<span class="kt">double</span> <span class="n">convertedDecimal</span> <span class="o">=</span> <span class="nc">Double</span><span class="o">.</span><span class="na">parseDouble</span><span class="o">(</span><span class="s">"45.67"</span><span class="o">);</span>
+</code></pre></div></div>
+
+<h3 id="common-casting-scenarios">Common Casting Scenarios</h3>
+<p>Understanding when and why to cast helps prevent errors and data loss. Always consider what happens to your data during conversion.</p>
+
+<hr />
+
+<h2 id="chapter-6-strings-and-methods---working-with-text">Chapter 6: Strings and Methods - Working with Text</h2>
+
+<h3 id="understanding-strings">Understanding Strings</h3>
+<p>Strings in Java are objects that represent sequences of characters. Think of them as digital text that you can manipulate and analyze.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">message</span> <span class="o">=</span> <span class="s">"Hello, Java!"</span><span class="o">;</span>
+<span class="nc">String</span> <span class="n">empty</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
+<span class="nc">String</span> <span class="n">multiline</span> <span class="o">=</span> <span class="s">"Line 1\nLine 2\nLine 3"</span><span class="o">;</span>  <span class="c1">// \n creates new lines</span>
+</code></pre></div></div>
+
+<h3 id="string-methods---built-in-tools">String Methods - Built-in Tools</h3>
+<p>Java provides many built-in methods to work with strings:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">text</span> <span class="o">=</span> <span class="s">"Java Programming"</span><span class="o">;</span>
+
+<span class="c1">// Finding information about the string</span>
+<span class="kt">int</span> <span class="n">length</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="na">length</span><span class="o">();</span>              <span class="c1">// Returns 16</span>
+<span class="kt">char</span> <span class="n">firstChar</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>         <span class="c1">// Returns 'J'</span>
+<span class="kt">boolean</span> <span class="n">isEmpty</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">();</span>        <span class="c1">// Returns false</span>
+
+<span class="c1">// Searching within strings</span>
+<span class="kt">int</span> <span class="n">index</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="na">indexOf</span><span class="o">(</span><span class="s">"Program"</span><span class="o">);</span>     <span class="c1">// Returns 5</span>
+<span class="kt">boolean</span> <span class="n">contains</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="s">"Java"</span><span class="o">);</span> <span class="c1">// Returns true</span>
+
+<span class="c1">// Modifying strings (creates new strings)</span>
+<span class="nc">String</span> <span class="n">uppercase</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="na">toUpperCase</span><span class="o">();</span>   <span class="c1">// "JAVA PROGRAMMING"</span>
+<span class="nc">String</span> <span class="n">lowercase</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="na">toLowerCase</span><span class="o">();</span>   <span class="c1">// "java programming"</span>
+<span class="nc">String</span> <span class="n">trimmed</span> <span class="o">=</span> <span class="s">"  Hello  "</span><span class="o">.</span><span class="na">trim</span><span class="o">();</span>     <span class="c1">// "Hello" (removes spaces)</span>
+
+<span class="c1">// Extracting parts of strings</span>
+<span class="nc">String</span> <span class="n">substring</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">4</span><span class="o">);</span> <span class="c1">// "Java"</span>
+<span class="nc">String</span><span class="o">[]</span> <span class="n">words</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="na">split</span><span class="o">(</span><span class="s">" "</span><span class="o">);</span>        <span class="c1">// ["Java", "Programming"]</span>
+</code></pre></div></div>
+
+<h3 id="string-concatenation">String Concatenation</h3>
+<p>Combining strings together:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">firstName</span> <span class="o">=</span> <span class="s">"John"</span><span class="o">;</span>
+<span class="nc">String</span> <span class="n">lastName</span> <span class="o">=</span> <span class="s">"Doe"</span><span class="o">;</span>
+
+<span class="c1">// Using + operator</span>
+<span class="nc">String</span> <span class="n">fullName</span> <span class="o">=</span> <span class="n">firstName</span> <span class="o">+</span> <span class="s">" "</span> <span class="o">+</span> <span class="n">lastName</span><span class="o">;</span>
+
+<span class="c1">// Using concat method</span>
+<span class="nc">String</span> <span class="n">anotherWay</span> <span class="o">=</span> <span class="n">firstName</span><span class="o">.</span><span class="na">concat</span><span class="o">(</span><span class="s">" "</span><span class="o">).</span><span class="na">concat</span><span class="o">(</span><span class="n">lastName</span><span class="o">);</span>
+
+<span class="c1">// Using StringBuilder for multiple concatenations (more efficient)</span>
+<span class="nc">StringBuilder</span> <span class="n">builder</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StringBuilder</span><span class="o">();</span>
+<span class="n">builder</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">firstName</span><span class="o">).</span><span class="na">append</span><span class="o">(</span><span class="s">" "</span><span class="o">).</span><span class="na">append</span><span class="o">(</span><span class="n">lastName</span><span class="o">);</span>
+<span class="nc">String</span> <span class="n">result</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="na">toString</span><span class="o">();</span>
+</code></pre></div></div>
+
+<h3 id="important-string-concepts">Important String Concepts</h3>
+<p>Strings in Java are immutable - they cannot be changed once created. When you “modify” a string, Java creates a new one. This is important for memory management and performance.</p>
+
+<hr />
+
+<h2 id="chapter-7-math-operations---calculating-and-computing">Chapter 7: Math Operations - Calculating and Computing</h2>
+
+<h3 id="arithmetic-operators">Arithmetic Operators</h3>
+<p>Java provides standard mathematical operations:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="o">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">3</span><span class="o">;</span>
+
+<span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="o">;</span>         <span class="c1">// Addition: 13</span>
+<span class="kt">int</span> <span class="n">difference</span> <span class="o">=</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="o">;</span>   <span class="c1">// Subtraction: 7</span>
+<span class="kt">int</span> <span class="n">product</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span><span class="o">;</span>     <span class="c1">// Multiplication: 30</span>
+<span class="kt">int</span> <span class="n">quotient</span> <span class="o">=</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span><span class="o">;</span>    <span class="c1">// Division: 3 (integer division)</span>
+<span class="kt">int</span> <span class="n">remainder</span> <span class="o">=</span> <span class="n">a</span> <span class="o">%</span> <span class="n">b</span><span class="o">;</span>   <span class="c1">// Modulus (remainder): 1</span>
+
+<span class="c1">// Division with decimals</span>
+<span class="kt">double</span> <span class="n">preciseDiv</span> <span class="o">=</span> <span class="o">(</span><span class="kt">double</span><span class="o">)</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span><span class="o">;</span>  <span class="c1">// 3.333...</span>
+</code></pre></div></div>
+
+<h3 id="assignment-operators">Assignment Operators</h3>
+<p>Shortcuts for common operations:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span>
+<span class="n">x</span> <span class="o">+=</span> <span class="mi">5</span><span class="o">;</span>  <span class="c1">// Same as x = x + 5; Result: 15</span>
+<span class="n">x</span> <span class="o">-=</span> <span class="mi">3</span><span class="o">;</span>  <span class="c1">// Same as x = x - 3; Result: 12</span>
+<span class="n">x</span> <span class="o">*=</span> <span class="mi">2</span><span class="o">;</span>  <span class="c1">// Same as x = x * 2; Result: 24</span>
+<span class="n">x</span> <span class="o">/=</span> <span class="mi">4</span><span class="o">;</span>  <span class="c1">// Same as x = x / 4; Result: 6</span>
+<span class="n">x</span> <span class="o">%=</span> <span class="mi">4</span><span class="o">;</span>  <span class="c1">// Same as x = x % 4; Result: 2</span>
+</code></pre></div></div>
+
+<h3 id="increment-and-decrement">Increment and Decrement</h3>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">counter</span> <span class="o">=</span> <span class="mi">5</span><span class="o">;</span>
+<span class="n">counter</span><span class="o">++;</span>    <span class="c1">// Post-increment: use current value, then add 1</span>
+<span class="o">++</span><span class="n">counter</span><span class="o">;</span>    <span class="c1">// Pre-increment: add 1, then use new value</span>
+<span class="n">counter</span><span class="o">--;</span>    <span class="c1">// Post-decrement: use current value, then subtract 1</span>
+<span class="o">--</span><span class="n">counter</span><span class="o">;</span>    <span class="c1">// Pre-decrement: subtract 1, then use new value</span>
+</code></pre></div></div>
+
+<h3 id="math-class-methods">Math Class Methods</h3>
+<p>Java’s Math class provides many useful functions:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Basic functions</span>
+<span class="kt">double</span> <span class="n">result</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">pow</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">);</span>        <span class="c1">// 2^3 = 8.0</span>
+<span class="kt">double</span> <span class="n">squareRoot</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">sqrt</span><span class="o">(</span><span class="mi">16</span><span class="o">);</span>     <span class="c1">// 4.0</span>
+<span class="kt">double</span> <span class="n">absolute</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">abs</span><span class="o">(-</span><span class="mi">5</span><span class="o">);</span>        <span class="c1">// 5.0</span>
+
+<span class="c1">// Rounding functions</span>
+<span class="kt">double</span> <span class="n">rounded</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">round</span><span class="o">(</span><span class="mf">3.7</span><span class="o">);</span>      <span class="c1">// 4.0</span>
+<span class="kt">double</span> <span class="n">ceiling</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">ceil</span><span class="o">(</span><span class="mf">3.2</span><span class="o">);</span>       <span class="c1">// 4.0</span>
+<span class="kt">double</span> <span class="n">floor</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">floor</span><span class="o">(</span><span class="mf">3.8</span><span class="o">);</span>        <span class="c1">// 3.0</span>
+
+<span class="c1">// Random numbers</span>
+<span class="kt">double</span> <span class="n">random</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">random</span><span class="o">();</span>         <span class="c1">// Random between 0.0 and 1.0</span>
+<span class="kt">int</span> <span class="n">randomInt</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)(</span><span class="nc">Math</span><span class="o">.</span><span class="na">random</span><span class="o">()</span> <span class="o">*</span> <span class="mi">100</span><span class="o">);</span> <span class="c1">// Random int 0-99</span>
+
+<span class="c1">// Trigonometric functions</span>
+<span class="kt">double</span> <span class="n">sine</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">sin</span><span class="o">(</span><span class="nc">Math</span><span class="o">.</span><span class="na">PI</span> <span class="o">/</span> <span class="mi">2</span><span class="o">);</span>   <span class="c1">// sin(90°) = 1.0</span>
+<span class="kt">double</span> <span class="n">cosine</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">cos</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>           <span class="c1">// cos(0°) = 1.0</span>
+</code></pre></div></div>
+
+<h3 id="order-of-operations">Order of Operations</h3>
+<p>Java follows mathematical order of operations (PEMDAS):</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">4</span><span class="o">;</span>        <span class="c1">// Result: 14 (not 20)</span>
+<span class="kt">int</span> <span class="n">withParens</span> <span class="o">=</span> <span class="o">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span><span class="o">)</span> <span class="o">*</span> <span class="mi">4</span><span class="o">;</span>  <span class="c1">// Result: 20</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="chapter-8-arrays---organizing-multiple-values">Chapter 8: Arrays - Organizing Multiple Values</h2>
+
+<h3 id="what-are-arrays">What Are Arrays?</h3>
+<p>Arrays are like parking lots with numbered spaces - they store multiple values of the same type in a specific order. Each value has an index (position number) starting from 0.</p>
+
+<h3 id="creating-and-initializing-arrays">Creating and Initializing Arrays</h3>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Declaration and size specification</span>
+<span class="kt">int</span><span class="o">[]</span> <span class="n">numbers</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">5</span><span class="o">];</span>  <span class="c1">// Array of 5 integers, all initially 0</span>
+
+<span class="c1">// Declaration with initial values</span>
+<span class="kt">int</span><span class="o">[]</span> <span class="n">ages</span> <span class="o">=</span> <span class="o">{</span><span class="mi">16</span><span class="o">,</span> <span class="mi">17</span><span class="o">,</span> <span class="mi">18</span><span class="o">,</span> <span class="mi">16</span><span class="o">,</span> <span class="mi">17</span><span class="o">};</span>
+<span class="nc">String</span><span class="o">[]</span> <span class="n">names</span> <span class="o">=</span> <span class="o">{</span><span class="s">"Alice"</span><span class="o">,</span> <span class="s">"Bob"</span><span class="o">,</span> <span class="s">"Charlie"</span><span class="o">,</span> <span class="s">"Diana"</span><span class="o">};</span>
+
+<span class="c1">// Alternative syntax</span>
+<span class="kt">double</span> <span class="n">scores</span><span class="o">[]</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">double</span><span class="o">[</span><span class="mi">10</span><span class="o">];</span>  <span class="c1">// Less common style</span>
+</code></pre></div></div>
+
+<h3 id="accessing-array-elements">Accessing Array Elements</h3>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span><span class="o">[]</span> <span class="n">fruits</span> <span class="o">=</span> <span class="o">{</span><span class="s">"apple"</span><span class="o">,</span> <span class="s">"banana"</span><span class="o">,</span> <span class="s">"orange"</span><span class="o">,</span> <span class="s">"grape"</span><span class="o">};</span>
+
+<span class="c1">// Reading values (remember: index starts at 0)</span>
+<span class="nc">String</span> <span class="n">firstFruit</span> <span class="o">=</span> <span class="n">fruits</span><span class="o">[</span><span class="mi">0</span><span class="o">];</span>   <span class="c1">// "apple"</span>
+<span class="nc">String</span> <span class="n">lastFruit</span> <span class="o">=</span> <span class="n">fruits</span><span class="o">[</span><span class="mi">3</span><span class="o">];</span>    <span class="c1">// "grape"</span>
+
+<span class="c1">// Modifying values</span>
+<span class="n">fruits</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="s">"mango"</span><span class="o">;</span>  <span class="c1">// Changes "banana" to "mango"</span>
+
+<span class="c1">// Array length</span>
+<span class="kt">int</span> <span class="n">size</span> <span class="o">=</span> <span class="n">fruits</span><span class="o">.</span><span class="na">length</span><span class="o">;</span>  <span class="c1">// 4 (property, not method)</span>
+</code></pre></div></div>
+
+<h3 id="common-array-operations">Common Array Operations</h3>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span><span class="o">[]</span> <span class="n">numbers</span> <span class="o">=</span> <span class="o">{</span><span class="mi">10</span><span class="o">,</span> <span class="mi">20</span><span class="o">,</span> <span class="mi">30</span><span class="o">,</span> <span class="mi">40</span><span class="o">,</span> <span class="mi">50</span><span class="o">};</span>
+
+<span class="c1">// Traversing with traditional for loop</span>
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">numbers</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Index "</span> <span class="o">+</span> <span class="n">i</span> <span class="o">+</span> <span class="s">": "</span> <span class="o">+</span> <span class="n">numbers</span><span class="o">[</span><span class="n">i</span><span class="o">]);</span>
+<span class="o">}</span>
+
+<span class="c1">// Enhanced for loop (for-each)</span>
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">num</span> <span class="o">:</span> <span class="n">numbers</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Value: "</span> <span class="o">+</span> <span class="n">num</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="c1">// Finding maximum value</span>
+<span class="kt">int</span> <span class="n">max</span> <span class="o">=</span> <span class="n">numbers</span><span class="o">[</span><span class="mi">0</span><span class="o">];</span>
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">num</span> <span class="o">:</span> <span class="n">numbers</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">num</span> <span class="o">&gt;</span> <span class="n">max</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">max</span> <span class="o">=</span> <span class="n">num</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="multidimensional-arrays">Multidimensional Arrays</h3>
+<p>Arrays can contain other arrays, like a grid or table:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 2D array (like a spreadsheet)</span>
+<span class="kt">int</span><span class="o">[][]</span> <span class="n">matrix</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="o">{</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">},</span>
+    <span class="o">{</span><span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">6</span><span class="o">},</span>
+    <span class="o">{</span><span class="mi">7</span><span class="o">,</span> <span class="mi">8</span><span class="o">,</span> <span class="mi">9</span><span class="o">}</span>
+<span class="o">};</span>
+
+<span class="c1">// Accessing 2D array elements</span>
+<span class="kt">int</span> <span class="n">value</span> <span class="o">=</span> <span class="n">matrix</span><span class="o">[</span><span class="mi">1</span><span class="o">][</span><span class="mi">2</span><span class="o">];</span>  <span class="c1">// Gets 6 (row 1, column 2)</span>
+
+<span class="c1">// Traversing 2D array</span>
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="n">matrix</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">row</span><span class="o">++)</span> <span class="o">{</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">col</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">col</span> <span class="o">&lt;</span> <span class="n">matrix</span><span class="o">[</span><span class="n">row</span><span class="o">].</span><span class="na">length</span><span class="o">;</span> <span class="n">col</span><span class="o">++)</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">matrix</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">col</span><span class="o">]</span> <span class="o">+</span> <span class="s">" "</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>  <span class="c1">// New line after each row</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="array-limitations-and-considerations">Array Limitations and Considerations</h3>
+<p>Arrays have fixed sizes once created. If you need dynamic sizing, consider using ArrayList (covered in advanced topics). Always be careful with array bounds to avoid IndexOutOfBoundsException.</p>
+
+<hr />
+
+<h2 id="chapter-9-conditionals---making-decisions-in-code">Chapter 9: Conditionals - Making Decisions in Code</h2>
+
+<h3 id="understanding-conditional-logic">Understanding Conditional Logic</h3>
+<p>Conditionals allow your program to make decisions, like choosing different paths based on circumstances. Think of them as digital traffic lights that direct the flow of your program.</p>
+
+<h3 id="if-else-statements">If-Else Statements</h3>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">temperature</span> <span class="o">=</span> <span class="mi">75</span><span class="o">;</span>
+
+<span class="c1">// Simple if statement</span>
+<span class="k">if</span> <span class="o">(</span><span class="n">temperature</span> <span class="o">&gt;</span> <span class="mi">80</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"It's hot outside!"</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="c1">// If-else statement</span>
+<span class="k">if</span> <span class="o">(</span><span class="n">temperature</span> <span class="o">&gt;</span> <span class="mi">80</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"It's hot outside!"</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"It's not too hot."</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="c1">// If-else if-else chain</span>
+<span class="k">if</span> <span class="o">(</span><span class="n">temperature</span> <span class="o">&gt;</span> <span class="mi">90</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"It's very hot!"</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">temperature</span> <span class="o">&gt;</span> <span class="mi">80</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"It's warm."</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">temperature</span> <span class="o">&gt;</span> <span class="mi">60</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"It's comfortable."</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"It's cold."</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="comparison-operators">Comparison Operators</h3>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="o">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">20</span><span class="o">;</span>
+
+<span class="kt">boolean</span> <span class="n">isEqual</span> <span class="o">=</span> <span class="o">(</span><span class="n">a</span> <span class="o">==</span> <span class="n">b</span><span class="o">);</span>        <span class="c1">// false</span>
+<span class="kt">boolean</span> <span class="n">notEqual</span> <span class="o">=</span> <span class="o">(</span><span class="n">a</span> <span class="o">!=</span> <span class="n">b</span><span class="o">);</span>       <span class="c1">// true</span>
+<span class="kt">boolean</span> <span class="n">lessThan</span> <span class="o">=</span> <span class="o">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span><span class="o">);</span>        <span class="c1">// true</span>
+<span class="kt">boolean</span> <span class="n">lessOrEqual</span> <span class="o">=</span> <span class="o">(</span><span class="n">a</span> <span class="o">&lt;=</span> <span class="n">b</span><span class="o">);</span>    <span class="c1">// true</span>
+<span class="kt">boolean</span> <span class="n">greaterThan</span> <span class="o">=</span> <span class="o">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="o">);</span>     <span class="c1">// false</span>
+<span class="kt">boolean</span> <span class="n">greaterOrEqual</span> <span class="o">=</span> <span class="o">(</span><span class="n">a</span> <span class="o">&gt;=</span> <span class="n">b</span><span class="o">);</span> <span class="c1">// false</span>
+</code></pre></div></div>
+
+<h3 id="logical-operators">Logical Operators</h3>
+<p>Combine multiple conditions:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">age</span> <span class="o">=</span> <span class="mi">17</span><span class="o">;</span>
+<span class="kt">boolean</span> <span class="n">hasLicense</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
+<span class="kt">boolean</span> <span class="n">hasPermission</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+
+<span class="c1">// AND operator (&amp;&amp;) - all conditions must be true</span>
+<span class="k">if</span> <span class="o">(</span><span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">16</span> <span class="o">&amp;&amp;</span> <span class="n">hasLicense</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Can drive alone"</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="c1">// OR operator (||) - at least one condition must be true</span>
+<span class="k">if</span> <span class="o">(</span><span class="n">hasLicense</span> <span class="o">||</span> <span class="n">hasPermission</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Can drive with supervision"</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="c1">// NOT operator (!) - reverses the boolean value</span>
+<span class="k">if</span> <span class="o">(!</span><span class="n">hasPermission</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Permission denied"</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="c1">// Complex conditions</span>
+<span class="k">if</span> <span class="o">((</span><span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">18</span> <span class="o">||</span> <span class="n">hasPermission</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">hasLicense</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Eligible to drive"</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="switch-statements">Switch Statements</h3>
+<p>Useful when comparing a variable against multiple constant values:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">char</span> <span class="n">grade</span> <span class="o">=</span> <span class="sc">'B'</span><span class="o">;</span>
+
+<span class="k">switch</span> <span class="o">(</span><span class="n">grade</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">case</span> <span class="sc">'A'</span><span class="o">:</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Excellent!"</span><span class="o">);</span>
+        <span class="k">break</span><span class="o">;</span>
+    <span class="k">case</span> <span class="sc">'B'</span><span class="o">:</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Good job!"</span><span class="o">);</span>
+        <span class="k">break</span><span class="o">;</span>
+    <span class="k">case</span> <span class="sc">'C'</span><span class="o">:</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Average work."</span><span class="o">);</span>
+        <span class="k">break</span><span class="o">;</span>
+    <span class="k">case</span> <span class="sc">'D'</span><span class="o">:</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Needs improvement."</span><span class="o">);</span>
+        <span class="k">break</span><span class="o">;</span>
+    <span class="k">case</span> <span class="sc">'F'</span><span class="o">:</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Failed."</span><span class="o">);</span>
+        <span class="k">break</span><span class="o">;</span>
+    <span class="k">default</span><span class="o">:</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Invalid grade."</span><span class="o">);</span>
+        <span class="k">break</span><span class="o">;</span>
+<span class="o">}</span>
+
+<span class="c1">// Switch with strings (Java 7+)</span>
+<span class="nc">String</span> <span class="n">day</span> <span class="o">=</span> <span class="s">"Monday"</span><span class="o">;</span>
+<span class="k">switch</span> <span class="o">(</span><span class="n">day</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">case</span> <span class="s">"Monday"</span><span class="o">:</span>
+    <span class="k">case</span> <span class="s">"Tuesday"</span><span class="o">:</span>
+    <span class="k">case</span> <span class="s">"Wednesday"</span><span class="o">:</span>
+    <span class="k">case</span> <span class="s">"Thursday"</span><span class="o">:</span>
+    <span class="k">case</span> <span class="s">"Friday"</span><span class="o">:</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Weekday"</span><span class="o">);</span>
+        <span class="k">break</span><span class="o">;</span>
+    <span class="k">case</span> <span class="s">"Saturday"</span><span class="o">:</span>
+    <span class="k">case</span> <span class="s">"Sunday"</span><span class="o">:</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Weekend"</span><span class="o">);</span>
+        <span class="k">break</span><span class="o">;</span>
+    <span class="k">default</span><span class="o">:</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Invalid day"</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="ternary-operator">Ternary Operator</h3>
+<p>A shorthand for simple if-else statements:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">score</span> <span class="o">=</span> <span class="mi">85</span><span class="o">;</span>
+<span class="nc">String</span> <span class="n">result</span> <span class="o">=</span> <span class="o">(</span><span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">70</span><span class="o">)</span> <span class="o">?</span> <span class="s">"Pass"</span> <span class="o">:</span> <span class="s">"Fail"</span><span class="o">;</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">result</span><span class="o">);</span>  <span class="c1">// "Pass"</span>
+
+<span class="c1">// Equivalent to:</span>
+<span class="nc">String</span> <span class="n">result2</span><span class="o">;</span>
+<span class="k">if</span> <span class="o">(</span><span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">70</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">result2</span> <span class="o">=</span> <span class="s">"Pass"</span><span class="o">;</span>
+<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+    <span class="n">result2</span> <span class="o">=</span> <span class="s">"Fail"</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="chapter-10-loops---repeating-actions-efficiently">Chapter 10: Loops - Repeating Actions Efficiently</h2>
+
+<h3 id="why-use-loops">Why Use Loops?</h3>
+<p>Loops allow you to repeat actions without writing the same code multiple times. Think of loops like a music playlist that can repeat songs or play them in sequence.</p>
+
+<h3 id="for-loops">For Loops</h3>
+<p>Best when you know how many times to repeat:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Basic for loop</span>
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Count: "</span> <span class="o">+</span> <span class="n">i</span><span class="o">);</span>
+<span class="o">}</span>
+<span class="c1">// Prints: Count: 0, Count: 1, Count: 2, Count: 3, Count: 4</span>
+
+<span class="c1">// Counting down</span>
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">--)</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
+<span class="o">}</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Blast off!"</span><span class="o">);</span>
+
+<span class="c1">// Counting by twos</span>
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">20</span><span class="o">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">2</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>  <span class="c1">// 0, 2, 4, 6, ... 20</span>
+<span class="o">}</span>
+
+<span class="c1">// Enhanced for loop (for-each) with arrays</span>
+<span class="nc">String</span><span class="o">[]</span> <span class="n">fruits</span> <span class="o">=</span> <span class="o">{</span><span class="s">"apple"</span><span class="o">,</span> <span class="s">"banana"</span><span class="o">,</span> <span class="s">"orange"</span><span class="o">};</span>
+<span class="k">for</span> <span class="o">(</span><span class="nc">String</span> <span class="n">fruit</span> <span class="o">:</span> <span class="n">fruits</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"I like "</span> <span class="o">+</span> <span class="n">fruit</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="while-loops">While Loops</h3>
+<p>Best when you don’t know exactly how many iterations you need:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Basic while loop</span>
+<span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+<span class="k">while</span> <span class="o">(</span><span class="n">count</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Count: "</span> <span class="o">+</span> <span class="n">count</span><span class="o">);</span>
+    <span class="n">count</span><span class="o">++;</span>  <span class="c1">// Important: update the condition variable</span>
+<span class="o">}</span>
+
+<span class="c1">// Reading user input until they enter "quit"</span>
+<span class="nc">Scanner</span> <span class="n">scanner</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Scanner</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
+<span class="nc">String</span> <span class="n">input</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
+<span class="k">while</span> <span class="o">(!</span><span class="n">input</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">"quit"</span><span class="o">))</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"Enter a word (or 'quit' to exit): "</span><span class="o">);</span>
+    <span class="n">input</span> <span class="o">=</span> <span class="n">scanner</span><span class="o">.</span><span class="na">nextLine</span><span class="o">();</span>
+    <span class="k">if</span> <span class="o">(!</span><span class="n">input</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">"quit"</span><span class="o">))</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"You entered: "</span> <span class="o">+</span> <span class="n">input</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="do-while-loops">Do-While Loops</h3>
+<p>Executes at least once, then checks the condition:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">number</span><span class="o">;</span>
+<span class="nc">Scanner</span> <span class="n">scanner</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Scanner</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
+
+<span class="k">do</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"Enter a positive number: "</span><span class="o">);</span>
+    <span class="n">number</span> <span class="o">=</span> <span class="n">scanner</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">number</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"That's not positive. Try again."</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span> <span class="k">while</span> <span class="o">(</span><span class="n">number</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="o">);</span>
+
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Thank you! You entered: "</span> <span class="o">+</span> <span class="n">number</span><span class="o">);</span>
+</code></pre></div></div>
+
+<h3 id="loop-control-statements">Loop Control Statements</h3>
+<p>Control the flow within loops:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// break statement - exits the loop immediately</span>
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">i</span> <span class="o">==</span> <span class="mi">5</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">break</span><span class="o">;</span>  <span class="c1">// Loop stops when i equals 5</span>
+    <span class="o">}</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>  <span class="c1">// Prints 1, 2, 3, 4</span>
+<span class="o">}</span>
+
+<span class="c1">// continue statement - skips rest of current iteration</span>
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">continue</span><span class="o">;</span>  <span class="c1">// Skip even numbers</span>
+    <span class="o">}</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>  <span class="c1">// Prints 1, 3, 5, 7, 9</span>
+<span class="o">}</span>
+
+<span class="c1">// Nested loops - loops within loops</span>
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">row</span> <span class="o">&lt;=</span> <span class="mi">3</span><span class="o">;</span> <span class="n">row</span><span class="o">++)</span> <span class="o">{</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">col</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">col</span> <span class="o">&lt;=</span> <span class="mi">4</span><span class="o">;</span> <span class="n">col</span><span class="o">++)</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"* "</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>  <span class="c1">// New line after each row</span>
+<span class="o">}</span>
+<span class="c1">// Creates a 3x4 pattern of asterisks</span>
+</code></pre></div></div>
+
+<h3 id="common-loop-patterns">Common Loop Patterns</h3>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Accumulator pattern - building up a value</span>
+<span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+    <span class="n">sum</span> <span class="o">+=</span> <span class="n">i</span><span class="o">;</span>  <span class="c1">// Add each number to the sum</span>
+<span class="o">}</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Sum of 1 to 100: "</span> <span class="o">+</span> <span class="n">sum</span><span class="o">);</span>
+
+<span class="c1">// Search pattern - finding something in an array</span>
+<span class="kt">int</span><span class="o">[]</span> <span class="n">numbers</span> <span class="o">=</span> <span class="o">{</span><span class="mi">23</span><span class="o">,</span> <span class="mi">45</span><span class="o">,</span> <span class="mi">67</span><span class="o">,</span> <span class="mi">89</span><span class="o">,</span> <span class="mi">12</span><span class="o">,</span> <span class="mi">34</span><span class="o">};</span>
+<span class="kt">int</span> <span class="n">target</span> <span class="o">=</span> <span class="mi">67</span><span class="o">;</span>
+<span class="kt">boolean</span> <span class="n">found</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">num</span> <span class="o">:</span> <span class="n">numbers</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">num</span> <span class="o">==</span> <span class="n">target</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">found</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
+        <span class="k">break</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Found "</span> <span class="o">+</span> <span class="n">target</span> <span class="o">+</span> <span class="s">": "</span> <span class="o">+</span> <span class="n">found</span><span class="o">);</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="chapter-11-basics-of-object-oriented-programming-oop">Chapter 11: Basics of Object-Oriented Programming (OOP)</h2>
+
+<h3 id="what-is-object-oriented-programming">What Is Object-Oriented Programming?</h3>
+<p>OOP is a way of organizing code that mirrors how we think about the real world. Instead of just writing procedures, we create “objects” that represent things and can perform actions. Think of objects like digital versions of real-world items.</p>
+
+<h3 id="classes-and-objects">Classes and Objects</h3>
+<p>A class is like a blueprint or template, while an object is a specific instance created from that template:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Class definition - the blueprint</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Student</span> <span class="o">{</span>
+    <span class="c1">// Attributes (instance variables) - what a student has</span>
+    <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+    <span class="kt">int</span> <span class="n">age</span><span class="o">;</span>
+    <span class="kt">int</span> <span class="n">grade</span><span class="o">;</span>
+    <span class="kt">double</span> <span class="n">gpa</span><span class="o">;</span>
+    
+    <span class="c1">// Constructor - how to create a new student</span>
+    <span class="kd">public</span> <span class="nf">Student</span><span class="o">(</span><span class="nc">String</span> <span class="n">studentName</span><span class="o">,</span> <span class="kt">int</span> <span class="n">studentAge</span><span class="o">,</span> <span class="kt">int</span> <span class="n">studentGrade</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="n">studentName</span><span class="o">;</span>
+        <span class="n">age</span> <span class="o">=</span> <span class="n">studentAge</span><span class="o">;</span>
+        <span class="n">grade</span> <span class="o">=</span> <span class="n">studentGrade</span><span class="o">;</span>
+        <span class="n">gpa</span> <span class="o">=</span> <span class="mf">0.0</span><span class="o">;</span>  <span class="c1">// Default value</span>
+    <span class="o">}</span>
+    
+    <span class="c1">// Methods - what a student can do</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">study</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">name</span> <span class="o">+</span> <span class="s">" is studying."</span><span class="o">);</span>
+    <span class="o">}</span>
+    
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">displayInfo</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Name: "</span> <span class="o">+</span> <span class="n">name</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Age: "</span> <span class="o">+</span> <span class="n">age</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Grade: "</span> <span class="o">+</span> <span class="n">grade</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"GPA: "</span> <span class="o">+</span> <span class="n">gpa</span><span class="o">);</span>
+    <span class="o">}</span>
+    
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">updateGPA</span><span class="o">(</span><span class="kt">double</span> <span class="n">newGPA</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">gpa</span> <span class="o">=</span> <span class="n">newGPA</span><span class="o">;</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">name</span> <span class="o">+</span> <span class="s">"'s GPA updated to "</span> <span class="o">+</span> <span class="n">gpa</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">// Using the class - creating objects</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SchoolDemo</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// Creating objects (instances) of Student</span>
+        <span class="nc">Student</span> <span class="n">alice</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Student</span><span class="o">(</span><span class="s">"Alice Johnson"</span><span class="o">,</span> <span class="mi">16</span><span class="o">,</span> <span class="mi">11</span><span class="o">);</span>
+        <span class="nc">Student</span> <span class="n">bob</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Student</span><span class="o">(</span><span class="s">"Bob Smith"</span><span class="o">,</span> <span class="mi">17</span><span class="o">,</span> <span class="mi">12</span><span class="o">);</span>
+        
+        <span class="c1">// Using object methods</span>
+        <span class="n">alice</span><span class="o">.</span><span class="na">displayInfo</span><span class="o">();</span>
+        <span class="n">alice</span><span class="o">.</span><span class="na">study</span><span class="o">();</span>
+        <span class="n">alice</span><span class="o">.</span><span class="na">updateGPA</span><span class="o">(</span><span class="mf">3.85</span><span class="o">);</span>
+        
+        <span class="n">bob</span><span class="o">.</span><span class="na">displayInfo</span><span class="o">();</span>
+        <span class="n">bob</span><span class="o">.</span><span class="na">updateGPA</span><span class="o">(</span><span class="mf">3.92</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="encapsulation---protecting-data">Encapsulation - Protecting Data</h3>
+<p>Encapsulation means keeping data private and controlling access through methods:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">BankAccount</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="kt">double</span> <span class="n">balance</span><span class="o">;</span>  <span class="c1">// Private - can't be accessed directly</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">accountNumber</span><span class="o">;</span>
+    
+    <span class="kd">public</span> <span class="nf">BankAccount</span><span class="o">(</span><span class="nc">String</span> <span class="n">accNum</span><span class="o">,</span> <span class="kt">double</span> <span class="n">initialBalance</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">accountNumber</span> <span class="o">=</span> <span class="n">accNum</span><span class="o">;</span>
+        <span class="n">balance</span> <span class="o">=</span> <span class="n">initialBalance</span><span class="o">;</span>
+    <span class="o">}</span>
+    
+    <span class="c1">// Public methods to interact with private data</span>
+    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">getBalance</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">balance</span><span class="o">;</span>
+    <span class="o">}</span>
+    
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">deposit</span><span class="o">(</span><span class="kt">double</span> <span class="n">amount</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">amount</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">balance</span> <span class="o">+=</span> <span class="n">amount</span><span class="o">;</span>
+            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Deposited $"</span> <span class="o">+</span> <span class="n">amount</span><span class="o">);</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Invalid deposit amount"</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+    
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">withdraw</span><span class="o">(</span><span class="kt">double</span> <span class="n">amount</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">amount</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">amount</span> <span class="o">&lt;=</span> <span class="n">balance</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">balance</span> <span class="o">-=</span> <span class="n">amount</span><span class="o">;</span>
+            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Withdrew $"</span> <span class="o">+</span> <span class="n">amount</span><span class="o">);</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Invalid withdrawal amount"</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="the-four-pillars-of-oop">The Four Pillars of OOP</h3>
+
+<ol>
+  <li><strong>Encapsulation</strong>: Bundling data and methods together, controlling access</li>
+  <li><strong>Inheritance</strong>: Creating new classes based on existing ones</li>
+  <li><strong>Polymorphism</strong>: Using one interface for different underlying forms</li>
+  <li><strong>Abstraction</strong>: Hiding complex implementation details</li>
+</ol>
+
+<h3 id="why-use-oop">Why Use OOP?</h3>
+<p>OOP helps organize code, makes it reusable, easier to maintain, and models real-world relationships. It’s like organizing your room - everything has its place and purpose.</p>
+
+<h3 id="static-vs-instance-members">Static vs Instance Members</h3>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Calculator</span> <span class="o">{</span>
+    <span class="c1">// Static variable - belongs to the class, not individual objects</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">double</span> <span class="no">PI</span> <span class="o">=</span> <span class="mf">3.14159</span><span class="o">;</span>
+    
+    <span class="c1">// Instance variable - each Calculator object has its own</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">model</span><span class="o">;</span>
+    
+    <span class="c1">// Static method - can be called without creating an object</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">double</span> <span class="nf">add</span><span class="o">(</span><span class="kt">double</span> <span class="n">a</span><span class="o">,</span> <span class="kt">double</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="o">;</span>
+    <span class="o">}</span>
+    
+    <span class="c1">// Instance method - requires an object to call</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setModel</span><span class="o">(</span><span class="nc">String</span> <span class="n">modelName</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">modelName</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">// Usage:</span>
+<span class="kt">double</span> <span class="n">result</span> <span class="o">=</span> <span class="nc">Calculator</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="mi">5</span><span class="o">,</span> <span class="mi">3</span><span class="o">);</span>  <span class="c1">// Static method call</span>
+<span class="nc">Calculator</span> <span class="n">calc</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Calculator</span><span class="o">();</span>
+<span class="n">calc</span><span class="o">.</span><span class="na">setModel</span><span class="o">(</span><span class="s">"Scientific"</span><span class="o">);</span>  <span class="c1">// Instance method call</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="practical-projects-and-exercises">Practical Projects and Exercises</h2>
+
+<p>To reinforce your learning, here are some project ideas progressing from basic to intermediate:</p>
+
+<h3 id="beginner-projects">Beginner Projects</h3>
+<ol>
+  <li><strong>Personal Information Display</strong>: Create a program that stores and displays your personal information</li>
+  <li><strong>Simple Calculator</strong>: Build a calculator that performs basic arithmetic operations</li>
+  <li><strong>Grade Calculator</strong>: Calculate averages and letter grades from numerical scores</li>
+</ol>
+
+<h3 id="intermediate-projects">Intermediate Projects</h3>
+<ol>
+  <li><strong>Student Management System</strong>: Create a system to manage student records with classes and objects</li>
+  <li><strong>Bank Account Simulator</strong>: Implement account operations with proper encapsulation</li>
+  <li><strong>Text Adventure Game</strong>: Build a simple interactive story using conditionals and loops</li>
+</ol>
+
+<h3 id="learning-tips-and-best-practices">Learning Tips and Best Practices</h3>
+
+<p>As you progress through this material, remember these important principles:</p>
+
+<p><strong>Practice Regularly</strong>: Programming is like learning an instrument - regular practice is more effective than occasional marathon sessions. Try to write code daily, even if just for 15-30 minutes.</p>
+
+<p><strong>Start Small</strong>: Begin with simple programs and gradually add complexity. Don’t try to build a complex application on your first day.</p>
+
+<p><strong>Read Error Messages</strong>: Error messages are your friends. They tell you exactly what went wrong and often suggest how to fix it.</p>
+
+<p><strong>Comment Your Code</strong>: Write comments explaining what your code does. Your future self will thank you.</p>
+
+<p><strong>Test Frequently</strong>: Run your programs often to catch errors early. Don’t write 100 lines of code before testing.</p>
+
+<p><strong>Ask for Help</strong>: Programming can be challenging. Don’t hesitate to ask teachers, classmates, or online communities for help when you’re stuck.</p>
+
+<p><strong>Understand, Don’t Memorize</strong>: Focus on understanding concepts rather than memorizing syntax. The syntax will become natural with practice.</p>
+
+<p>Remember, every expert programmer was once a beginner. Be patient with yourself, celebrate small victories, and enjoy the journey of learning to code. Java is a powerful language that opens doors to mobile app development, web applications, enterprise software, and much more.</p>
+
+<p>Good luck with your Java programming journey!</p>]]></content><author><name>Dimas R</name><email>dimasr@duck.com</email></author><category term="posts" /><category term="backend" /><summary type="html"><![CDATA[Chapter 1: Basic Syntax - Your First Steps in Java]]></summary></entry></feed>
