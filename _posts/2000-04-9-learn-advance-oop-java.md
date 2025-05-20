@@ -2,25 +2,10 @@
 style: single
 title: "Advance OOP Java"
 classes: wide
+toc: true
 author_profile: true
 categories: 
   - Java
----
-
-## Table of Contents
-1. [Object Lifecycle](#object-lifecycle)
-2. [Inheritance](#inheritance)
-3. [Abstraction](#abstraction)
-4. [Method Chaining](#method-chaining)
-5. [Encapsulation](#encapsulation)
-6. [Interfaces](#interfaces)
-7. [Enums](#enums)
-8. [Record](#record)
-9. [Method Overloading / Overriding](#method-overloading--overriding)
-10. [Initializer Block](#initializer-block)
-11. [Static vs Dynamic Binding](#static-vs-dynamic-binding)
-12. [Pass by Value / Pass by Reference](#pass-by-value--pass-by-reference)
-
 ---
 
 ## 1. Object Lifecycle
