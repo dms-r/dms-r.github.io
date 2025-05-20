@@ -1,6 +1,6 @@
 ---
 style: single
-title: "Adnvance OOP Java"
+title: "Advance OOP Java"
 classes: wide
 author_profile: true
 categories: 
