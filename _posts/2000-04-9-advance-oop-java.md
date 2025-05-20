@@ -1,9 +1,6 @@
 ---
-style: single
 title: "Advance OOP Java"
 classes: wide
-toc: true
-author_profile: true
 categories: 
   - Java
 ---

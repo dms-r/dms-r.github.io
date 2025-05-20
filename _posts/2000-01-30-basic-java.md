@@ -1,8 +1,6 @@
 ---
-style: single
 title: "Basic Java"
 classes: wide
-author_profile: true
 categories: 
   - Java
 ---
