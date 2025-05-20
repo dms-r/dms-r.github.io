@@ -32,7 +32,7 @@ masthead_title           : # overrides the website title displayed in the masthe
 breadcrumbs              : # true, false (default)
 words_per_minute         : 200
 enable_copy_code_button  : true # false (default)
-copyright                : # "copyright" name, defaults to site.title
+copyright                : Dimas R # "copyright" name, defaults to site.title
 copyright_url            : # "copyright" URL, defaults to site.url
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
@@ -83,7 +83,7 @@ google:
   search_engine_id       : # YOUR_SEARCH_ENGINE_ID
   instant_search         : # false (default), true
 # SEO Related
-google_site_verification : lkJ-qBaNb-Ze8n4AXRSF4GBpIZxqeGfvQqGk4H5ol-E
+google_site_verification : 
 bing_site_verification   :
 naver_site_verification  :
 yandex_site_verification :
@@ -116,7 +116,7 @@ analytics:
 author:
   name             : "Dimas R"
   avatar           : "https://avatars.githubusercontent.com/u/174266241?v=4" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Just students."
+  bio              : ""
   location         : "Indonesia"
   email            : dimasr@duck.com
   links:
@@ -321,7 +321,6 @@ compress_html:
   ignore:
     envs: development
 
-
 # Defaults
 defaults:
   # _posts
@@ -329,31 +328,15 @@ defaults:
       path: "_posts"
       type: posts
     values:
-      toc: true
-      show_date: true
-      layout: posts
+      layout: single
       author_profile: true
       read_time: true
-      comments: # true
       share: true
       related: true
-      date_format: "%Y-%m-%d"
-
-defaults:
   # _pages
   - scope:
       path: "_pages"
       type: pages
     values:
       layout: single
-
-defaults:
-  # _project
-  - scope:
-      path: "_projects"
-      type: project
-    values:
-      layout: splash
-
-
-
+      author_profile: true

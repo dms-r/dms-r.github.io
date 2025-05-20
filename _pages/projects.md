@@ -1,4 +1,10 @@
 ---
 layout: single
-permalink: /projects/
+permalink: /projects/index.html
+title: "My Projects"
+classes: wide
+author_profile: true
 ---
+
+- 
+

@@ -1,11 +1,10 @@
 ---
-layout: posts
-title: "Complete Java Learning Guide for High School Students"
-categories: posts
+style: single
+title: "Basic Java"
 classes: wide
 author_profile: true
-tags:
-  - backend
+categories: 
+  - Java
 ---
 
 ## Chapter 1: Basic Syntax - Your First Steps in Java
