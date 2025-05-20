@@ -10,7 +10,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>My Projects | dms-r.github.io</title>
+<!-- begin _includes/seo.html --><title>$ cd projects/ | dms-r.github.io</title>
 <meta name="description" content="Personal website.">
 
 
@@ -21,7 +21,7 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="dms-r.github.io">
-<meta property="og:title" content="My Projects">
+<meta property="og:title" content="$ cd projects/">
 <meta property="og:url" content="http://localhost:4000/projects/">
 
 
@@ -272,7 +272,7 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="My Projects">
+    <meta itemprop="headline" content="$ cd projects/">
     
     
     
@@ -281,7 +281,7 @@
       
         <header>
           <h1 id="page-title" class="page__title" itemprop="headline">
-            <a href="http://localhost:4000/projects/index.html" itemprop="url">My Projects
+            <a href="http://localhost:4000/projects/index.html" itemprop="url">$ cd projects/
 </a>
           </h1>
           
@@ -292,10 +292,61 @@
 
       <section class="page__content" itemprop="text">
         
-        <ul>
-  <li></li>
-</ul>
+        <style>
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
 
+.project-card {
+  background-color:rgb(33, 42, 56);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgb(83, 83, 83);
+  transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 0.1rem;
+}
+
+.project-title {
+  font-size: 1rem;
+  color:rgba(72, 146, 214, 0.93);
+  margin-top: 0.5rem;
+}
+
+.project-description {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.88);
+  margin: 0.5rem;
+}
+
+.tech-stack {
+  font-size: 0.5rem;
+  color: rgb(131, 173, 207);
+}
+</style>
+
+<div class="project-grid">
+  
+    <div class="project-card">
+      <a href="https://github.com/dms-r/dms-r.github.io" class="project-title">Lorem Ipsum</a>
+      <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p class="tech-stack"><strong>Tech Stack:</strong> Jekyll, CSS, Minimal Mistakes</p>
+      <img src="/asstets/img/image.png" alt="Lorem Ipsum" />
+    </div>
+  
+</div>
 
         
       </section>
@@ -348,6 +399,10 @@
     
 
     
+      
+        
+          <li><a href="mailto:dimasr@duck.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+        
       
         
       

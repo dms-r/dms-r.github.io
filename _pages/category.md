@@ -1,5 +1,5 @@
 ---
-title: "Blog by Category"
+title: "$ cd blog/category/"
 layout: categories
 permalink: /categories/
 author_profile: true
