@@ -2,7 +2,7 @@
 layout: single
 author_profile: true
 permalink: /about-me/
-title: "About"
+title: "About Author"
 classes: wide
 ---
 ## $ whoami
@@ -14,7 +14,10 @@ My name is Dimas, I'm someone who enjoys learning about economics and it. For no
 
 ## $ ./skills --soft
 - Problem Solving
-- Flexible
+- Adaptibility
+- Communication
+- Willing to learn
+
 
 ## $ ./languages
 - Indonesia (Native)
