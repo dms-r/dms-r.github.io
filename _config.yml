@@ -14,7 +14,6 @@ exclude:
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-relative-links
 
 sass:
   sourcemap: never
