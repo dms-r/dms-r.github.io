@@ -2,4 +2,4 @@ _site/
 
 Gemfile.lock
 
-.ssas-cache/
+.sass-cache/
