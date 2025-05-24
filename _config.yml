@@ -1,0 +1,21 @@
+title: dms-r
+description: Hello there
+baseurl: /
+url: https://dms-r.github.io
+
+theme: hacked-jekyll
+
+exclude:
+  - LICENSE
+  - README.md
+  - Gemfile
+  - .gitignore
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-relative-links
+
+sass:
+  sourcemap: never
+  
