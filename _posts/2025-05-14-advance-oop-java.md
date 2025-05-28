@@ -1,6 +1,6 @@
 ---
 title:  "Advance OOP Java"
-date:   2000-04-09
+date:   2025-05-14
 categories: [Java, Backend]
 tags: [OOP]
 ---

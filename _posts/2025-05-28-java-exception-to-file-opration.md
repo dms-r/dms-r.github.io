@@ -1,5 +1,5 @@
 ---
-title:  "Exeption Handling to File Operation"
+title:  "Java Exeption Handling to File Operation"
 date:   2025-05-28
 categories: [Java, Backend]
 tags: [Other]

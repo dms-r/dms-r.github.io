@@ -1,6 +1,6 @@
 ---
 title:  "Basic Java"
-date:   2000-01-30
+date:   2025-04-30
 categories: [Java, Backend]
 tags: [Syntax]
 ---

@@ -1,6 +1,6 @@
 ---
 title:  "Basic OOP Java"
-date:   2000-02-13
+date:   2025-05-09
 categories: [Java, Backend]
 tags: [OOP]
 ---
