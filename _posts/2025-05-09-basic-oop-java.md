@@ -622,6 +622,4 @@ Try creating a simple Library Management System with the following classes:
 
 Think about what should be public, private, static, or final in your design. Consider how these classes should interact with each other.
 
-The next part of your OOP journey will cover more advanced topics like inheritance, polymorphism, and interfaces. These concepts build upon what you've learned here, so make sure you're comfortable with classes, objects, methods, and access control before moving forward.
-
 Remember: programming is like learning a musical instrument - it takes practice to become fluent. Don't worry if everything doesn't click immediately. Keep experimenting with code, and these concepts will become second nature over time!
