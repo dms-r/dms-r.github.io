@@ -9,7 +9,7 @@ draft: false
 lang: 'en'
 ---
 
-## Chapter 1 - A Tutorial Introduction
+# Chapter 1 - A Tutorial Introduction
 
 Welcome to the exciting world of C programming! This tutorial is designed specifically for high school students who want to learn one of the most fundamental and powerful programming languages ever created.
 
