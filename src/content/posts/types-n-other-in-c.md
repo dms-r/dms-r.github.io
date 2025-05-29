@@ -4,7 +4,7 @@ published: 2025-05-29
 description: 'Types, operators and expressions in c'
 image: ''
 tags: [Syntax, Embedded]
-category: 'C'
+category: 'Clang'
 draft: false 
 lang: 'en'
 ---
