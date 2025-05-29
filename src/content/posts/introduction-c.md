@@ -1,15 +1,15 @@
 ---
-title: Introduction C
+title: Chapter 1 - Learn C
 published: 2025-05-29
-description: 'A introduction to learn about c'
+description: 'A tutorial introduction c'
 image: ''
-tags: [Embedded, Syntax]
+tags: [Syntax, Embedded]
 category: 'Clang'
 draft: false 
 lang: 'en'
 ---
 
-# Chapter 1 - A Tutorial Introduction
+## Introduction C
 
 Welcome to the exciting world of C programming! This tutorial is designed specifically for high school students who want to learn one of the most fundamental and powerful programming languages ever created.
 

@@ -9,7 +9,7 @@ draft: false
 lang: 'en'
 ---
 
-## Introduction to Collections {#introduction}
+## Introduction to Collections 
 
 ### What are Collections?
 Think of collections as **containers** that hold multiple objects. Just like how you might have a box to store your books, or a folder to organize your papers, Java collections help you organize and manage multiple pieces of data in your programs.
@@ -22,7 +22,7 @@ Think of collections as **containers** that hold multiple objects. Just like how
 
 ---
 
-## Array vs ArrayList {#array-vs-arraylist}
+## Array vs ArrayList 
 
 ### Arrays - The Traditional Way
 
@@ -89,7 +89,7 @@ System.out.println("Size: " + numbers.size()); // Shows current size
 
 ---
 
-## Set Collection {#set-collection}
+## Set Collection
 
 ### What is a Set?
 A Set is like a **club membership list** - each person can only be a member once. No duplicates allowed!
@@ -144,7 +144,7 @@ public class SchoolRegistry {
 
 ---
 
-## Map Collection {#map-collection}
+## Map Collection
 
 ### What is a Map?
 A Map is like a **dictionary** or **phone book** - you look up a key (word/name) to find its value (definition/phone number).
@@ -212,7 +212,7 @@ public class StudentSystem {
 
 ---
 
-## Queue and Dequeue {#queue-and-dequeue}
+## Queue and Dequeue 
 
 ### Queue - First In, First Out (FIFO)
 A Queue is like a **line at the cafeteria** - the first person in line is the first person served.
@@ -292,7 +292,7 @@ public class PrinterQueue {
 
 ---
 
-## Stack Collection {#stack-collection}
+## Stack Collection
 
 ### Stack - Last In, First Out (LIFO)
 A Stack is like a **stack of plates** - you can only add or remove plates from the top.
@@ -358,7 +358,7 @@ public class TextEditor {
 
 ---
 
-## Iterator {#iterator}
+## Iterator
 
 ### What is an Iterator?
 An Iterator is like a **bookmark** that helps you go through a collection one element at a time, without needing to know the internal structure.
@@ -436,7 +436,7 @@ public class SafeRemoval {
 
 ---
 
-## Generic Collections {#generic-collections}
+## Generic Collections
 
 ### What are Generics?
 Generics are like **labeled boxes** - they tell Java what type of objects can be stored in a collection. This prevents you from accidentally putting the wrong type of object in the wrong place.
@@ -548,7 +548,7 @@ public class StudentCollection {
 
 ---
 
-## Practice Examples {#practice-examples}
+## Practice Examples
 
 ### Example 1: Library Book Management System
 

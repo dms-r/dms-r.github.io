@@ -1,5 +1,5 @@
 ---
-title: Types and Other in C
+title: Chapter 2 - Learn C
 published: 2025-05-29
 description: 'Types, operators and expressions in c'
 image: ''
@@ -8,8 +8,6 @@ category: 'Clang'
 draft: false 
 lang: 'en'
 ---
-
-# Chapter 2 - Types, Operators and Expressions
 
 ## Learning Objectives
 By the end of this chapter, you will be able to:

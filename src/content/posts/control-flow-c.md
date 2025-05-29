@@ -1,15 +1,13 @@
 ---
-title: Control Flow in C
+title: Chapter 3 - Learn C
 published: 2025-05-29
-description: 'Learn control flow in c as boy'
+description: 'Control flow in c'
 image: ''
 tags: [Syntax, Embedded]
 category: 'Clang'
 draft: false 
-lang: ''
+lang: 'en'
 ---
-
-# Chapter 3 - Control Flow in C Programming
 
 ## Introduction to Control Flow
 
