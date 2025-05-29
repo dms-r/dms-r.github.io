@@ -1,6 +1,6 @@
 ---
 title: Chapter 1 - Learn C
-published: 2025-05-29
+published: 2025-05-28
 description: 'A tutorial introduction c'
 image: ''
 tags: [Syntax, Embedded]

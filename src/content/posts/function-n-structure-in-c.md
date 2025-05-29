@@ -1,7 +1,7 @@
 ---
 title: Chapter 4 - Learn C
 published: 2025-05-29
-description: 'Functions and program Ssructure in c'
+description: 'Functions and program stucture in c'
 image: ''
 tags: [Syntax, Embedded]
 category: 'Clang'
