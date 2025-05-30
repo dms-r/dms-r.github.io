@@ -709,7 +709,7 @@ int main() {
  */
 ```
 
-## Part 2: Core Programming Skills in C
+## Part 2: Core Programming Skills
 
 ```c
 #include <stdio.h>      // For input/output functions
@@ -1429,3 +1429,541 @@ int main() {
  * which covers modular programming, preprocessor, standard library, and debugging.
  */
  ```
+## Part 3: Intermediate Programming Concepts
+
+```c
+#include <stdio.h>      // Standard input/output - like printf, scanf
+#include <stdlib.h>     // Standard library - like malloc, exit, rand
+#include <string.h>     // String functions - like strcpy, strlen
+#include <math.h>       // Math functions - like sqrt, pow, sin
+#include <assert.h>     // Assertion testing - helps catch bugs early
+#include <errno.h>      // Error number definitions - system error codes
+#include <time.h>       // Time functions - for random number seeding
+
+/*
+ * ============================================================================
+ * CHAPTER 10: MODULAR PROGRAMMING AND HEADER FILES
+ * ============================================================================
+ * 
+ * Think of modular programming like organizing your room. Instead of throwing
+ * everything in one big pile, you put clothes in the closet, books on shelves,
+ * and electronics in designated spots. Similarly, we organize code into separate
+ * files based on their purpose.
+ * 
+ * Why is this important?
+ * 1. MAINTAINABILITY: Easier to find and fix problems
+ * 2. REUSABILITY: Use the same code in multiple projects
+ * 3. TEAMWORK: Different people can work on different parts
+ * 4. TESTING: Test individual components separately
+ */
+
+// DEMONSTRATION: What would typically be in a header file (student_operations.h)
+// Header files are like the table of contents of a book - they tell you
+// what functions are available without showing the actual implementation
+
+// Function declarations (prototypes) - these would be in a .h file
+// Think of these as "promises" - we promise these functions exist somewhere
+int calculate_grade_average(int grades[], int count);
+void print_student_info(const char* name, int age, float gpa);
+char determine_letter_grade(float numeric_grade);
+
+// EXTERNAL LINKAGE vs STATIC LINKAGE demonstration
+// External linkage means "this can be used by other files"
+extern int global_student_count;  // This variable exists in another file
+
+// Static linkage means "this is private to this file only"
+static int file_private_counter = 0;  // Only this file can access this
+
+/*
+ * COMPILATION UNITS: Understanding how C programs are built
+ * 
+ * When you write C code across multiple files, each .c file becomes a
+ * "compilation unit." Think of it like building a car:
+ * - Engine department builds the engine (engine.c)
+ * - Body department builds the frame (body.c) 
+ * - Electronics department handles wiring (electronics.c)
+ * - Final assembly puts it all together (main.c)
+ * 
+ * The linker is like the final assembly line - it connects all the parts.
+ */
+
+// Example of what might be in different files:
+// File: student_operations.c (implementation file)
+int calculate_grade_average(int grades[], int count) {
+    // Always validate input parameters - defensive programming!
+    if (grades == NULL || count <= 0) {
+        return -1;  // Error indicator
+    }
+    
+    int sum = 0;
+    for (int i = 0; i < count; i++) {
+        sum += grades[i];  // Add each grade to running total
+    }
+    return sum / count;  // Integer division gives us the average
+}
+
+void print_student_info(const char* name, int age, float gpa) {
+    // Using 'const char*' means we won't modify the string - good practice!
+    printf("Student: %s, Age: %d, GPA: %.2f\n", name, age, gpa);
+}
+
+char determine_letter_grade(float numeric_grade) {
+    // Clear, readable logic - easy to maintain and understand
+    if (numeric_grade >= 90.0) return 'A';
+    else if (numeric_grade >= 80.0) return 'B';
+    else if (numeric_grade >= 70.0) return 'C';
+    else if (numeric_grade >= 60.0) return 'D';
+    else return 'F';
+}
+
+/*
+ * ============================================================================
+ * CHAPTER 11: PREPROCESSOR AND MACROS
+ * ============================================================================
+ * 
+ * The preprocessor is like a smart find-and-replace tool that runs BEFORE
+ * your code is actually compiled. It's like having an assistant who reads
+ * through your essay and makes changes before you submit it.
+ * 
+ * Key preprocessor directives:
+ * #define - Creates text replacements (macros)
+ * #include - Inserts other files
+ * #ifdef/#ifndef - Conditional compilation
+ * #pragma - Compiler-specific instructions
+ */
+
+// BASIC MACROS - Simple text replacement
+#define MAX_STUDENTS 100        // Symbolic constant - easier to change later
+#define PI 3.14159265359        // Mathematical constant
+#define SQUARE(x) ((x) * (x))   // Function-like macro
+
+// IMPORTANT: Notice the parentheses around (x) and the whole expression!
+// This prevents problems with operator precedence
+// Wrong: #define SQUARE(x) x * x  // SQUARE(2+3) becomes 2+3*2+3 = 11, not 25!
+// Right: #define SQUARE(x) ((x) * (x))  // SQUARE(2+3) becomes ((2+3)*(2+3)) = 25
+
+// CONDITIONAL COMPILATION - Like having different versions of your program
+#define DEBUG_MODE 1  // Set to 1 for debug version, 0 for release
+
+#ifdef DEBUG_MODE
+    #define DEBUG_PRINT(fmt, ...) printf("DEBUG: " fmt "\n", ##__VA_ARGS__)
+#else
+    #define DEBUG_PRINT(fmt, ...) // Empty - debug prints disappear in release
+#endif
+
+// ADVANCED MACRO TECHNIQUES
+// Multi-line macros use backslash for continuation
+#define SWAP(type, a, b) do { \
+    type temp = a; \
+    a = b; \
+    b = temp; \
+} while(0)
+
+// The do-while(0) trick ensures the macro behaves like a single statement
+// This prevents problems when used in if-statements without braces
+
+/*
+ * MACROS vs FUNCTIONS: When to use which?
+ * 
+ * Use MACROS when:
+ * - You need text replacement (like constants)
+ * - Performance is critical (no function call overhead)
+ * - You need to work with different data types (generic programming)
+ * 
+ * Use FUNCTIONS when:
+ * - Logic is complex
+ * - You need type checking
+ * - Code size matters (functions are shared, macros are copied)
+ * - You need debugging (easier to debug functions)
+ */
+
+/*
+ * ============================================================================
+ * CHAPTER 12: WORKING WITH THE STANDARD LIBRARY
+ * ============================================================================
+ * 
+ * The C Standard Library is like a well-stocked toolbox. Instead of making
+ * your own hammer every time you need to drive a nail, you use the one that's
+ * already been perfected by experts and tested by millions of users.
+ * 
+ * Major standard library headers:
+ * stdio.h  - Input/Output (printf, scanf, file operations)
+ * stdlib.h - General utilities (memory, conversion, random numbers)
+ * string.h - String manipulation (strcpy, strcmp, strlen)
+ * math.h   - Mathematical functions (sqrt, sin, cos, pow)
+ */
+
+void demonstrate_standard_library() {
+    printf("\n=== CHAPTER 12: STANDARD LIBRARY DEMONSTRATION ===\n");
+    
+    // STRING FUNCTIONS (string.h)
+    char source[] = "Hello, World!";
+    char destination[50];  // Make sure it's big enough!
+    
+    // strcpy - copies one string to another
+    strcpy(destination, source);
+    printf("After strcpy: %s\n", destination);
+    
+    // strlen - returns length of string (not counting null terminator)
+    size_t length = strlen(source);
+    printf("Length of '%s': %zu characters\n", source, length);
+    
+    // strcmp - compares two strings (returns 0 if equal)
+    int comparison = strcmp("apple", "banana");
+    printf("Comparing 'apple' to 'banana': %d %s\n", 
+           comparison, (comparison < 0) ? "(apple comes first)" : "(banana comes first)");
+    
+    // MEMORY FUNCTIONS (stdlib.h)
+    // malloc - allocates memory dynamically
+    int* numbers = malloc(5 * sizeof(int));  // Space for 5 integers
+    if (numbers == NULL) {
+        printf("Memory allocation failed!\n");
+        return;  // Always check if malloc succeeded!
+    }
+    
+    // Initialize the allocated memory
+    for (int i = 0; i < 5; i++) {
+        numbers[i] = i * 10;  // 0, 10, 20, 30, 40
+    }
+    
+    printf("Dynamic array: ");
+    for (int i = 0; i < 5; i++) {
+        printf("%d ", numbers[i]);
+    }
+    printf("\n");
+    
+    free(numbers);  // Always free what you malloc!
+    numbers = NULL; // Good practice - prevents accidental reuse
+    
+    // MATH FUNCTIONS (math.h)
+    // Note: You might need to link with -lm flag when compiling
+    double angle = PI / 4;  // 45 degrees in radians
+    printf("sin(45°) = %.3f\n", sin(angle));
+    printf("cos(45°) = %.3f\n", cos(angle));
+    printf("sqrt(16) = %.1f\n", sqrt(16.0));
+    printf("2^8 = %.0f\n", pow(2.0, 8.0));
+    
+    // RANDOM NUMBERS (stdlib.h)
+    srand(time(NULL));  // Seed random number generator with current time
+    printf("Random numbers: ");
+    for (int i = 0; i < 5; i++) {
+        int random_num = rand() % 100;  // 0 to 99
+        printf("%d ", random_num);
+    }
+    printf("\n");
+    
+    // SORTING AND SEARCHING (stdlib.h)
+    int array_to_sort[] = {64, 34, 25, 12, 22, 11, 90};
+    int array_size = sizeof(array_to_sort) / sizeof(array_to_sort[0]);
+    
+    printf("Before sorting: ");
+    for (int i = 0; i < array_size; i++) {
+        printf("%d ", array_to_sort[i]);
+    }
+    printf("\n");
+    
+    // qsort - quick sort algorithm from standard library
+    // We need a comparison function for qsort
+    int compare_ints(const void* a, const void* b) {
+        int int_a = *(const int*)a;
+        int int_b = *(const int*)b;
+        return (int_a > int_b) - (int_a < int_b);  // Clever comparison trick
+    }
+    
+    qsort(array_to_sort, array_size, sizeof(int), compare_ints);
+    
+    printf("After sorting: ");
+    for (int i = 0; i < array_size; i++) {
+        printf("%d ", array_to_sort[i]);
+    }
+    printf("\n");
+}
+
+/*
+ * ============================================================================
+ * CHAPTER 13: ERROR HANDLING AND DEBUGGING
+ * ============================================================================
+ * 
+ * Error handling is like defensive driving - you assume things can go wrong
+ * and prepare for them. Good error handling is what separates amateur code
+ * from professional software that people actually want to use.
+ * 
+ * Types of errors:
+ * 1. COMPILE-TIME: Syntax errors, type mismatches
+ * 2. RUNTIME: Division by zero, null pointer access, out of bounds
+ * 3. LOGIC: Program runs but produces wrong results
+ */
+
+// USING ASSERT FOR DEBUGGING
+// assert() is like adding safety checks to your code
+// Think of it as "I'm so sure this should be true that if it's not, stop everything!"
+void demonstrate_assertions() {
+    printf("\n=== ASSERTION DEMONSTRATION ===\n");
+    
+    int positive_number = 42;
+    
+    // This assertion passes - program continues normally
+    assert(positive_number > 0);  // "I assert that positive_number is positive"
+    printf("Assertion passed: %d is positive\n", positive_number);
+    
+    // In debug builds, assertions are checked
+    // In release builds, assertions are typically disabled for performance
+    // Compile with -DNDEBUG to disable assertions
+    
+    int* ptr = malloc(sizeof(int));
+    assert(ptr != NULL);  // Make sure malloc succeeded
+    *ptr = 100;
+    printf("Successfully allocated and used memory: %d\n", *ptr);
+    free(ptr);
+}
+
+// COMPREHENSIVE ERROR HANDLING EXAMPLE
+// This function shows multiple error handling techniques
+int safe_divide_and_process(int dividend, int divisor, int* result) {
+    // INPUT VALIDATION - Check parameters before using them
+    if (result == NULL) {
+        printf("Error: result pointer is NULL\n");
+        return -1;  // Return error code
+    }
+    
+    if (divisor == 0) {
+        printf("Error: Division by zero attempted\n");
+        return -2;  // Different error code for different error
+    }
+    
+    // DEFENSIVE PROGRAMMING - Handle edge cases
+    if (dividend == INT_MIN && divisor == -1) {
+        printf("Error: Integer overflow would occur\n");
+        return -3;  // Prevent integer overflow
+    }
+    
+    // If we get here, the operation is safe
+    *result = dividend / divisor;
+    return 0;  // Success code
+}
+
+// ERRNO - SYSTEM ERROR REPORTING
+// errno is a global variable that system functions set when errors occur
+void demonstrate_errno() {
+    printf("\n=== ERRNO DEMONSTRATION ===\n");
+    
+    // Try to open a file that doesn't exist
+    FILE* file = fopen("nonexistent_file.txt", "r");
+    if (file == NULL) {
+        // When fopen fails, it sets errno to indicate why
+        printf("fopen failed: %s\n", strerror(errno));
+        // strerror converts errno number to human-readable message
+    }
+    
+    // Clear errno before next operation (good practice)
+    errno = 0;
+    
+    // Try to allocate an impossibly large amount of memory
+    void* huge_memory = malloc(SIZE_MAX);
+    if (huge_memory == NULL) {
+        if (errno != 0) {
+            printf("malloc failed: %s\n", strerror(errno));
+        } else {
+            printf("malloc failed: Reason unknown\n");
+        }
+    } else {
+        // This probably won't happen, but if it does, free the memory
+        free(huge_memory);
+    }
+}
+
+// DEBUGGING TECHNIQUES AND LOGGING
+void demonstrate_debugging_techniques() {
+    printf("\n=== DEBUGGING TECHNIQUES ===\n");
+    
+    // CONDITIONAL DEBUG OUTPUT
+    DEBUG_PRINT("This only appears in debug builds");
+    DEBUG_PRINT("Variable value: %d", 42);
+    
+    // LOGGING WITH DIFFERENT LEVELS
+    // In real applications, you might have different log levels
+    printf("INFO: Program started normally\n");
+    
+    int important_calculation = 42 * 2;
+    printf("DEBUG: Calculation result: %d\n", important_calculation);
+    
+    // Simulate a warning condition
+    if (important_calculation > 80) {
+        printf("WARNING: Result is unexpectedly high: %d\n", important_calculation);
+    }
+    
+    // TRACE EXECUTION - Show where the program is
+    printf("TRACE: Entering loop\n");
+    for (int i = 0; i < 3; i++) {
+        printf("TRACE: Loop iteration %d\n", i);
+    }
+    printf("TRACE: Exiting loop\n");
+}
+
+// COMMON RUNTIME ERRORS AND HOW TO AVOID THEM
+void demonstrate_common_errors() {
+    printf("\n=== COMMON RUNTIME ERRORS ===\n");
+    
+    // ERROR 1: NULL POINTER DEREFERENCE
+    int* ptr = NULL;
+    // *ptr = 42;  // DON'T DO THIS! Will crash the program
+    
+    // CORRECT WAY:
+    if (ptr != NULL) {
+        *ptr = 42;
+    } else {
+        printf("Avoided null pointer dereference\n");
+    }
+    
+    // ERROR 2: BUFFER OVERFLOW
+    char small_buffer[5] = "Hi";  // Only space for 4 chars + null terminator
+    // strcpy(small_buffer, "This string is way too long");  // DON'T DO THIS!
+    
+    // CORRECT WAY:
+    char safe_buffer[50];
+    strncpy(safe_buffer, "This string fits safely", sizeof(safe_buffer) - 1);
+    safe_buffer[sizeof(safe_buffer) - 1] = '\0';  // Ensure null termination
+    printf("Safe string copy: %s\n", safe_buffer);
+    
+    // ERROR 3: MEMORY LEAKS
+    int* dynamic_memory = malloc(sizeof(int) * 10);
+    if (dynamic_memory != NULL) {
+        // Use the memory...
+        dynamic_memory[0] = 100;
+        printf("Used dynamic memory: %d\n", dynamic_memory[0]);
+        
+        // ALWAYS FREE WHAT YOU ALLOCATE
+        free(dynamic_memory);
+        dynamic_memory = NULL;  // Prevent accidental reuse
+    }
+    
+    // ERROR 4: ARRAY BOUNDS CHECKING
+    int array[5] = {1, 2, 3, 4, 5};
+    int index = 10;  // This would be out of bounds!
+    
+    // SAFE ACCESS:
+    if (index >= 0 && index < 5) {
+        printf("Array element: %d\n", array[index]);
+    } else {
+        printf("Index %d is out of bounds for array of size 5\n", index);
+    }
+}
+
+/*
+ * ============================================================================
+ * MAIN FUNCTION - PUTTING IT ALL TOGETHER
+ * ============================================================================
+ */
+
+int main() {
+    printf("MASTERING C PROGRAMMING - PART III: INTERMEDIATE CONCEPTS\n");
+    printf("=========================================================\n");
+    
+    // CHAPTER 10 DEMONSTRATION
+    printf("\n=== CHAPTER 10: MODULAR PROGRAMMING ===\n");
+    
+    // Using functions that would typically be in separate files
+    int student_grades[] = {85, 92, 78, 96, 88};
+    int grade_count = sizeof(student_grades) / sizeof(student_grades[0]);
+    
+    int average = calculate_grade_average(student_grades, grade_count);
+    printf("Grade average: %d\n", average);
+    
+    print_student_info("Alice Johnson", 17, 3.7);
+    
+    char letter_grade = determine_letter_grade(average);
+    printf("Letter grade: %c\n", letter_grade);
+    
+    // CHAPTER 11 DEMONSTRATION  
+    printf("\n=== CHAPTER 11: PREPROCESSOR AND MACROS ===\n");
+    
+    printf("Maximum students allowed: %d\n", MAX_STUDENTS);
+    printf("Value of PI: %.6f\n", PI);
+    
+    int number = 5;
+    printf("Square of %d is %d\n", number, SQUARE(number));
+    printf("Square of (3+2) is %d\n", SQUARE(3+2));  // Shows why parentheses matter
+    
+    // Demonstrate the SWAP macro
+    int a = 10, b = 20;
+    printf("Before swap: a=%d, b=%d\n", a, b);
+    SWAP(int, a, b);
+    printf("After swap: a=%d, b=%d\n", a, b);
+    
+    // CHAPTER 12 DEMONSTRATION
+    demonstrate_standard_library();
+    
+    // CHAPTER 13 DEMONSTRATION
+    demonstrate_assertions();
+    
+    // Test error handling
+    int division_result;
+    int error_code = safe_divide_and_process(100, 5, &division_result);
+    if (error_code == 0) {
+        printf("Division successful: 100/5 = %d\n", division_result);
+    }
+    
+    // Test error case
+    error_code = safe_divide_and_process(100, 0, &division_result);
+    printf("Division by zero returned error code: %d\n", error_code);
+    
+    demonstrate_errno();
+    demonstrate_debugging_techniques();
+    demonstrate_common_errors();
+    
+    printf("\n=== SUMMARY OF PART III ===\n");
+    printf("You've learned the intermediate skills that separate hobbyist\n");
+    printf("programmers from professional developers:\n\n");
+    
+    printf("• MODULAR PROGRAMMING: Organizing code across multiple files\n");
+    printf("• PREPROCESSOR: Using macros and conditional compilation\n"); 
+    printf("• STANDARD LIBRARY: Leveraging tested, optimized functions\n");
+    printf("• ERROR HANDLING: Writing robust, reliable code\n\n");
+    
+    printf("These concepts form the foundation for the advanced topics\n");
+    printf("you'll encounter in Part IV. You're now ready to tackle\n");
+    printf("systems programming, networking, and real-world projects!\n");
+    
+    return 0;  // Successful program termination
+}
+
+/*
+ * ============================================================================
+ * COMPILATION AND MAKEFILE CONCEPTS (Chapter 10 Extended)
+ * ============================================================================
+ * 
+ * To compile this program properly, you would typically use:
+ * 
+ * gcc -Wall -Wextra -std=c99 -lm intermediate_concepts.c -o intermediate_concepts
+ * 
+ * Explanation of flags:
+ * -Wall      : Enable most warning messages
+ * -Wextra    : Enable extra warning messages  
+ * -std=c99   : Use C99 standard
+ * -lm        : Link with math library (needed for sin, cos, sqrt, etc.)
+ * -o         : Specify output filename
+ * 
+ * For a multi-file project, you might have a Makefile like:
+ * 
+ * CC=gcc
+ * CFLAGS=-Wall -Wextra -std=c99
+ * LIBS=-lm
+ * 
+ * program: main.o student_operations.o utilities.o
+ *     $(CC) $(CFLAGS) -o program main.o student_operations.o utilities.o $(LIBS)
+ * 
+ * main.o: main.c student_operations.h utilities.h
+ *     $(CC) $(CFLAGS) -c main.c
+ * 
+ * student_operations.o: student_operations.c student_operations.h
+ *     $(CC) $(CFLAGS) -c student_operations.c
+ * 
+ * utilities.o: utilities.c utilities.h
+ *     $(CC) $(CFLAGS) -c utilities.c
+ * 
+ * clean:
+ *     rm -f *.o program
+ * 
+ * This Makefile automates compilation and handles dependencies properly.
+ */
+```
