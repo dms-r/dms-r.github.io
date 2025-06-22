@@ -24,21 +24,30 @@ import { ThemeToggle } from '@/components/ThemeToggle';
 
 // Define navigation links
 const homeLink = { href: '/', label: 'Home', icon: <Lightbulb className="mr-2 h-5 w-5" /> };
-const projectsLink = { href: '/projects', label: 'Projects', icon: <Code className="mr-2 h-5 w-5" /> };
-const contactLink = { href: '/contact', label: 'Contact', icon: <Mail className="mr-2 h-5 w-5" /> };
 
+const aboutMeTitle = 'About Me';
 const aboutMeLinks = [
   { href: '/experience', label: 'Experience', icon: <Briefcase className="mr-2 h-5 w-5" /> },
   { href: '/education', label: 'Education', icon: <GraduationCap className="mr-2 h-5 w-5" /> },
   { href: '/skills', label: 'Skills', icon: <Users className="mr-2 h-5 w-5" /> },
 ];
 
+const projectsLink = { href: '/projects', label: 'Projects', icon: <Code className="mr-2 h-5 w-5" /> };
 const blogLink = { 
   href: 'https://dms-r.medium.com', 
   label: 'Blog', 
   icon: <BookOpen className="mr-2 h-5 w-5" />, 
   target: '_blank' 
 };
+const contactLink = { href: '/contact', label: 'Contact', icon: <Mail className="mr-2 h-5 w-5" /> };
+
+const navLinks = [
+  homeLink,
+  // "About Me" is handled separately
+  projectsLink,
+  blogLink,
+  contactLink,
+];
 
 export default function Header() {
   const [isSheetOpen, setIsSheetOpen] = useState(false);
@@ -54,41 +63,79 @@ export default function Header() {
   }, []);
 
   const isAboutMeActive = aboutMeLinks.some(link => link.href === pathname);
-  const isProjectsActive = pathname === projectsLink.href;
-  const isContactActive = pathname === contactLink.href;
+  
+  const NavButton = ({ href, label }: { href: string; label: string }) => (
+    <Button
+      variant="ghost"
+      asChild
+      className={cn(
+        "text-sm font-medium text-foreground/80 hover:text-foreground hover:bg-muted transition-colors px-3 lg:px-4 py-2",
+        pathname === href && "bg-muted text-foreground"
+      )}
+    >
+      <Link href={href}>{label}</Link>
+    </Button>
+  );
+
+  const ExternalNavButton = ({ href, label }: { href: string; label: string }) => (
+     <Button
+      variant="ghost"
+      asChild
+      className="text-sm font-medium text-foreground/80 hover:text-foreground hover:bg-muted transition-colors px-3 lg:px-4 py-2"
+    >
+      <Link href={href} target="_blank" rel="noopener noreferrer">{label}</Link>
+    </Button>
+  );
+  
+  const MobileNavLink = ({ href, label, icon, onClose }: { href: string; label: string; icon: React.ReactNode; onClose: () => void; }) => (
+     <Link
+        href={href}
+        onClick={onClose}
+        className={cn(
+          "flex items-center rounded-md p-3 text-base font-medium transition-colors hover:bg-muted",
+          pathname === href ? "text-primary bg-primary/10" : "text-muted-foreground hover:text-foreground"
+        )}
+      >
+        {icon}
+        {label}
+      </Link>
+  );
+  
+  const MobileExternalNavLink = ({ href, label, icon, target, onClose }: { href: string; label: string; icon: React.ReactNode; target?: string, onClose: () => void; }) => (
+    <Link
+      href={href}
+      target={target}
+      rel="noopener noreferrer"
+      onClick={onClose}
+      className="flex items-center rounded-md p-3 text-base font-medium text-muted-foreground transition-colors hover:text-foreground hover:bg-muted"
+    >
+      {icon}
+      {label}
+    </Link>
+  );
 
 
   return (
     <header className={cn(
       "sticky top-0 z-50 w-full transition-all duration-300 border-b",
-      isScrolled ? "bg-background/80 backdrop-blur-md shadow-md" : "bg-background/60 backdrop-blur-sm"
+      isScrolled ? "bg-background/80 backdrop-blur-md shadow-sm" : "bg-background/60 backdrop-blur-sm"
     )}>
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
-        <Link href="/" className="text-3xl font-headline font-bold text-primary hover:text-accent transition-colors" aria-label="ElegantFolio Home">
+        <Link href="/" className="text-3xl font-headline font-bold text-primary hover:text-accent transition-colors" aria-label="dpublic Home">
           dpublic
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-1 lg:space-x-2">
-          {/* Home */}
-          <Button
-            variant="ghost"
-            asChild
-            className={cn(
-              "text-foreground hover:bg-accent/20 hover:text-accent transition-all duration-200 px-3 py-2 text-sm",
-              pathname === homeLink.href ? "text-accent font-semibold border-b-2 border-accent rounded-none" : ""
-            )}
-          >
-            <Link href={homeLink.href}>{homeLink.label}</Link>
-          </Button>
-
+          <NavButton href={homeLink.href} label={homeLink.label} />
+          
           {/* About Me Dropdown */}
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost" className={cn("flex items-center text-foreground hover:bg-accent/20 hover:text-accent transition-all duration-200 px-3 py-2 text-sm",
-                isAboutMeActive && "text-accent font-semibold border-b-2 border-accent rounded-none"
+              <Button variant="ghost" className={cn("flex items-center text-sm font-medium text-foreground/80 hover:text-foreground hover:bg-muted transition-colors px-3 lg:px-4 py-2",
+                isAboutMeActive && "bg-muted text-foreground"
               )}>
-                About Me <ChevronDown className="ml-1 h-4 w-4" />
+                {aboutMeTitle} <ChevronDown className="ml-1 h-4 w-4" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent>
@@ -103,38 +150,9 @@ export default function Header() {
             </DropdownMenuContent>
           </DropdownMenu>
 
-          {/* Projects */}
-           <Button
-            variant="ghost"
-            asChild
-            className={cn(
-              "text-foreground hover:bg-accent/20 hover:text-accent transition-all duration-200 px-3 py-2 text-sm",
-              isProjectsActive ? "text-accent font-semibold border-b-2 border-accent rounded-none" : ""
-            )}
-          >
-            <Link href={projectsLink.href}>{projectsLink.label}</Link>
-          </Button>
-
-          {/* Blog Link */}
-          <Button
-            variant="ghost"
-            asChild
-            className="text-foreground hover:bg-accent/20 hover:text-accent transition-all duration-200 px-3 py-2 text-sm"
-          >
-            <Link href={blogLink.href} target={blogLink.target} rel="noopener noreferrer">{blogLink.label}</Link>
-          </Button>
-
-           {/* Contact */}
-           <Button
-            variant="ghost"
-            asChild
-            className={cn(
-              "text-foreground hover:bg-accent/20 hover:text-accent transition-all duration-200 px-3 py-2 text-sm",
-              isContactActive ? "text-accent font-semibold border-b-2 border-accent rounded-none" : ""
-            )}
-          >
-            <Link href={contactLink.href}>{contactLink.label}</Link>
-          </Button>
+          <NavButton href={projectsLink.href} label={projectsLink.label} />
+          <ExternalNavButton href={blogLink.href} label={blogLink.label} />
+          <NavButton href={contactLink.href} label={contactLink.label} />
           
           <ThemeToggle className="ml-2" />
         </nav>
@@ -148,97 +166,40 @@ export default function Header() {
                 <Menu className="h-7 w-7 text-primary" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[280px] bg-background p-6">
+            <SheetContent side="right" className="w-[280px] bg-background p-4">
               <SheetHeader>
-                <SheetTitle className="sr-only">Main Menu</SheetTitle>
+                 <SheetTitle asChild>
+                    <Link href="/" onClick={() => setIsSheetOpen(false)} className="mb-4 text-2xl font-headline font-bold text-primary text-left">
+                      dpublic
+                    </Link>
+                 </SheetTitle>
               </SheetHeader>
               <div className="flex flex-col space-y-1 mt-4">
-                <SheetClose asChild>
-                  <Link href="/" className="mb-4 text-2xl font-headline font-bold text-primary px-3">
-                    ElegantFolio
-                  </Link>
-                </SheetClose>
-                
-                {/* Home */}
-                <SheetClose asChild>
-                    <Link
-                      href={homeLink.href}
-                      className={cn(
-                        "flex items-center rounded-md p-3 text-lg font-medium transition-colors hover:bg-primary/10",
-                        pathname === homeLink.href ? "text-primary bg-primary/5" : "text-foreground"
-                      )}
-                    >
-                      {homeLink.icon}
-                      {homeLink.label}
-                    </Link>
-                </SheetClose>
+                <MobileNavLink href={homeLink.href} label={homeLink.label} icon={homeLink.icon} onClose={() => setIsSheetOpen(false)} />
 
                 {/* About Me Accordion for mobile */}
                 <Accordion type="single" collapsible className="w-full" defaultValue={isAboutMeActive ? "about-me" : undefined}>
                   <AccordionItem value="about-me" className="border-b-0">
-                    <AccordionTrigger className="flex items-center rounded-md p-3 text-lg font-medium transition-colors hover:bg-primary/10 hover:no-underline [&[data-state=open]]:bg-primary/5">
+                    <AccordionTrigger
+                      className={cn(
+                        "flex w-full items-center rounded-md p-3 text-base font-medium transition-colors hover:bg-muted hover:no-underline justify-start",
+                        isAboutMeActive ? "text-primary" : "text-muted-foreground hover:text-foreground"
+                      )}
+                    >
                       <Users className="mr-2 h-5 w-5" />
-                      About Me
+                      {aboutMeTitle}
                     </AccordionTrigger>
-                    <AccordionContent className="pl-8">
+                    <AccordionContent className="pl-4 pt-1">
                       {aboutMeLinks.map((link) => (
-                        <SheetClose asChild key={link.href}>
-                          <Link
-                            href={link.href}
-                            className={cn(
-                              "flex items-center rounded-md py-2 px-3 text-base font-medium transition-colors hover:bg-primary/10",
-                              pathname === link.href ? "text-primary bg-primary/5" : "text-foreground"
-                            )}
-                          >
-                            {link.icon}
-                            {link.label}
-                          </Link>
-                        </SheetClose>
+                        <MobileNavLink key={link.href} href={link.href} label={link.label} icon={link.icon} onClose={() => setIsSheetOpen(false)} />
                       ))}
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
-
-                {/* Projects */}
-                <SheetClose asChild>
-                    <Link
-                      href={projectsLink.href}
-                      className={cn(
-                        "flex items-center rounded-md p-3 text-lg font-medium transition-colors hover:bg-primary/10",
-                        pathname === projectsLink.href ? "text-primary bg-primary/5" : "text-foreground"
-                      )}
-                    >
-                      {projectsLink.icon}
-                      {projectsLink.label}
-                    </Link>
-                </SheetClose>
                 
-                {/* Blog */}
-                <SheetClose asChild>
-                  <Link
-                    href={blogLink.href}
-                    target={blogLink.target}
-                    rel="noopener noreferrer"
-                    className="flex items-center rounded-md p-3 text-lg font-medium transition-colors hover:bg-primary/10 text-foreground"
-                  >
-                    {blogLink.icon}
-                    {blogLink.label}
-                  </Link>
-                </SheetClose>
-
-                {/* Contact */}
-                <SheetClose asChild>
-                    <Link
-                      href={contactLink.href}
-                      className={cn(
-                        "flex items-center rounded-md p-3 text-lg font-medium transition-colors hover:bg-primary/10",
-                        pathname === contactLink.href ? "text-primary bg-primary/5" : "text-foreground"
-                      )}
-                    >
-                      {contactLink.icon}
-                      {contactLink.label}
-                    </Link>
-                </SheetClose>
+                <MobileNavLink href={projectsLink.href} label={projectsLink.label} icon={projectsLink.icon} onClose={() => setIsSheetOpen(false)} />
+                <MobileExternalNavLink href={blogLink.href} label={blogLink.label} icon={blogLink.icon} target={blogLink.target} onClose={() => setIsSheetOpen(false)} />
+                <MobileNavLink href={contactLink.href} label={contactLink.label} icon={contactLink.icon} onClose={() => setIsSheetOpen(false)} />
               </div>
             </SheetContent>
           </Sheet>
