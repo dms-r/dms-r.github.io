@@ -23,11 +23,9 @@ import { cn } from '@/lib/utils';
 import { ThemeToggle } from '@/components/ThemeToggle';
 
 // Define navigation links
-const mainNavLinks = [
-  { href: '/', label: 'Home', icon: <Lightbulb className="mr-2 h-5 w-5" /> },
-  { href: '/projects', label: 'Projects', icon: <Code className="mr-2 h-5 w-5" /> },
-  { href: '/contact', label: 'Contact', icon: <Mail className="mr-2 h-5 w-5" /> },
-];
+const homeLink = { href: '/', label: 'Home', icon: <Lightbulb className="mr-2 h-5 w-5" /> };
+const projectsLink = { href: '/projects', label: 'Projects', icon: <Code className="mr-2 h-5 w-5" /> };
+const contactLink = { href: '/contact', label: 'Contact', icon: <Mail className="mr-2 h-5 w-5" /> };
 
 const aboutMeLinks = [
   { href: '/experience', label: 'Experience', icon: <Briefcase className="mr-2 h-5 w-5" /> },
@@ -56,6 +54,9 @@ export default function Header() {
   }, []);
 
   const isAboutMeActive = aboutMeLinks.some(link => link.href === pathname);
+  const isProjectsActive = pathname === projectsLink.href;
+  const isContactActive = pathname === contactLink.href;
+
 
   return (
     <header className={cn(
@@ -69,19 +70,17 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-1 lg:space-x-2">
-          {mainNavLinks.map((link) => (
-            <Button
-              key={link.href}
-              variant="ghost"
-              asChild
-              className={cn(
-                "text-foreground hover:bg-accent/20 hover:text-accent transition-all duration-200 px-3 py-2 text-sm",
-                pathname === link.href ? "text-accent font-semibold border-b-2 border-accent rounded-none" : ""
-              )}
-            >
-              <Link href={link.href}>{link.label}</Link>
-            </Button>
-          ))}
+          {/* Home */}
+          <Button
+            variant="ghost"
+            asChild
+            className={cn(
+              "text-foreground hover:bg-accent/20 hover:text-accent transition-all duration-200 px-3 py-2 text-sm",
+              pathname === homeLink.href ? "text-accent font-semibold border-b-2 border-accent rounded-none" : ""
+            )}
+          >
+            <Link href={homeLink.href}>{homeLink.label}</Link>
+          </Button>
 
           {/* About Me Dropdown */}
           <DropdownMenu>
@@ -104,6 +103,18 @@ export default function Header() {
             </DropdownMenuContent>
           </DropdownMenu>
 
+          {/* Projects */}
+           <Button
+            variant="ghost"
+            asChild
+            className={cn(
+              "text-foreground hover:bg-accent/20 hover:text-accent transition-all duration-200 px-3 py-2 text-sm",
+              isProjectsActive ? "text-accent font-semibold border-b-2 border-accent rounded-none" : ""
+            )}
+          >
+            <Link href={projectsLink.href}>{projectsLink.label}</Link>
+          </Button>
+
           {/* Blog Link */}
           <Button
             variant="ghost"
@@ -111,6 +122,18 @@ export default function Header() {
             className="text-foreground hover:bg-accent/20 hover:text-accent transition-all duration-200 px-3 py-2 text-sm"
           >
             <Link href={blogLink.href} target={blogLink.target} rel="noopener noreferrer">{blogLink.label}</Link>
+          </Button>
+
+           {/* Contact */}
+           <Button
+            variant="ghost"
+            asChild
+            className={cn(
+              "text-foreground hover:bg-accent/20 hover:text-accent transition-all duration-200 px-3 py-2 text-sm",
+              isContactActive ? "text-accent font-semibold border-b-2 border-accent rounded-none" : ""
+            )}
+          >
+            <Link href={contactLink.href}>{contactLink.label}</Link>
           </Button>
           
           <ThemeToggle className="ml-2" />
@@ -136,20 +159,19 @@ export default function Header() {
                   </Link>
                 </SheetClose>
                 
-                {mainNavLinks.map((link) => (
-                  <SheetClose asChild key={link.href}>
-                      <Link
-                        href={link.href}
-                        className={cn(
-                          "flex items-center rounded-md p-3 text-lg font-medium transition-colors hover:bg-primary/10",
-                          pathname === link.href ? "text-primary bg-primary/5" : "text-foreground"
-                        )}
-                      >
-                        {link.icon}
-                        {link.label}
-                      </Link>
-                  </SheetClose>
-                ))}
+                {/* Home */}
+                <SheetClose asChild>
+                    <Link
+                      href={homeLink.href}
+                      className={cn(
+                        "flex items-center rounded-md p-3 text-lg font-medium transition-colors hover:bg-primary/10",
+                        pathname === homeLink.href ? "text-primary bg-primary/5" : "text-foreground"
+                      )}
+                    >
+                      {homeLink.icon}
+                      {homeLink.label}
+                    </Link>
+                </SheetClose>
 
                 {/* About Me Accordion for mobile */}
                 <Accordion type="single" collapsible className="w-full" defaultValue={isAboutMeActive ? "about-me" : undefined}>
@@ -176,7 +198,22 @@ export default function Header() {
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
+
+                {/* Projects */}
+                <SheetClose asChild>
+                    <Link
+                      href={projectsLink.href}
+                      className={cn(
+                        "flex items-center rounded-md p-3 text-lg font-medium transition-colors hover:bg-primary/10",
+                        pathname === projectsLink.href ? "text-primary bg-primary/5" : "text-foreground"
+                      )}
+                    >
+                      {projectsLink.icon}
+                      {projectsLink.label}
+                    </Link>
+                </SheetClose>
                 
+                {/* Blog */}
                 <SheetClose asChild>
                   <Link
                     href={blogLink.href}
@@ -187,6 +224,20 @@ export default function Header() {
                     {blogLink.icon}
                     {blogLink.label}
                   </Link>
+                </SheetClose>
+
+                {/* Contact */}
+                <SheetClose asChild>
+                    <Link
+                      href={contactLink.href}
+                      className={cn(
+                        "flex items-center rounded-md p-3 text-lg font-medium transition-colors hover:bg-primary/10",
+                        pathname === contactLink.href ? "text-primary bg-primary/5" : "text-foreground"
+                      )}
+                    >
+                      {contactLink.icon}
+                      {contactLink.label}
+                    </Link>
                 </SheetClose>
               </div>
             </SheetContent>
