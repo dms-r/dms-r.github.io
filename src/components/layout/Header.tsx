@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from 'next/link';
@@ -52,12 +53,20 @@ export default function Header() {
   const [isSheetOpen, setIsSheetOpen] = useState(false);
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    setIsMounted(true);
+    
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
+    
     window.addEventListener('scroll', handleScroll);
+    
+    // Call on mount to set initial state
+    handleScroll();
+    
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -117,7 +126,7 @@ export default function Header() {
   return (
     <header className={cn(
       "sticky top-0 z-50 w-full transition-all duration-300 border-b",
-      isScrolled ? "bg-background/80 backdrop-blur-md shadow-sm" : "bg-background/60 backdrop-blur-sm"
+      isMounted && isScrolled ? "bg-background/80 backdrop-blur-md shadow-sm" : "bg-background/60 backdrop-blur-sm"
     )}>
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="/" className="text-3xl font-headline font-bold text-primary hover:text-accent transition-colors" aria-label="dpublic Home">
