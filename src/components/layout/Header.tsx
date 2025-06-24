@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from 'next/link';
@@ -34,7 +33,7 @@ const aboutMeLinks = [
 
 const projectsLink = { href: '/projects', label: 'Projects', icon: <Code className="mr-2 h-5 w-5" /> };
 const blogLink = { 
-  href: 'https://dms-r.medium.com', 
+  href: 'https://blog.dpublic.my.id/', 
   label: 'Blog', 
   icon: <BookOpen className="mr-2 h-5 w-5" />, 
   target: '_blank' 
