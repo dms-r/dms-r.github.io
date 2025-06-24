@@ -112,7 +112,7 @@ export const portfolioData: CandidateProfile = {
   workExperience: [
     {
       id: "exp1",
-      company: "Community Support",
+      company: "Self-employment",
       jobTitle: "Informal Technical Support",
       employmentDates: "2023 - Present",
       description: [
@@ -123,8 +123,8 @@ export const portfolioData: CandidateProfile = {
     },
     {
       id: "exp2",
-      company: "Freelance",
-      jobTitle: "Bug Hunter",
+      company: "Self-employment",
+      jobTitle: "Freelance Bug Hunter",
       employmentDates: "2023 - Present",
       description: [
         "Analyze the vulnerability of a web or mobile app, thus ensuring it remains safe from similar attacks.",
@@ -143,7 +143,7 @@ export const portfolioData: CandidateProfile = {
       jobTitle: "Mathematics and Natural Sciences", // Program/Degree
       employmentDates: "2022 - 2025", // Duration
       description: [
-        "Achieved a GPA of 94/100.",
+        "Achieved a GPA of 93/100.",
         "Graduated with a strong foundation for technical learning."
       ],
       logoUrl: "https://sman1haurgeulis.sch.id/img/smantulis.webp",
@@ -172,7 +172,7 @@ export const portfolioData: CandidateProfile = {
       "id": "proj_pentest",
       "name": "Pentest CBT App",
       "description": "Conducted penetration testing on a Computer-Based Test (CBT) application. Identified and documented vulnerabilities related to network services, application code, and overall program response. The goal was to assess and improve the application's security posture by examining potential attack vectors like Insecure Direct Object References (IDOR), network weaknesses, and subdomain enumeration.",
-      "technologies": ["Nmap", "IDOR", "Network Analysis", "APK Analysis", "Web Security", "Subdomain Enumeration", "JadX"],
+      "technologies": ["Nmap", "IDOR", "APK Analysis", "Web Security", "Subdomain Enumeration", "JadX"],
       "imageUrl": "https://unsplash.com/photos/lVF2HLzjopw/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzQ5OTM2ODU2fA&force=true&w=640",
       "dataAiHint": "pentest cbt"
     },
@@ -199,10 +199,9 @@ export const portfolioData: CandidateProfile = {
         name: "Hardware",
         icon: Cpu,
         skills: [
-          { name: "PC Component Identification", level: "Advanced Beginner" },
+          { name: "Computer Identification", level: "Advanced Beginner" },
           { name: "Hardware Troubleshooting", level: "Advanced Beginner" },
           { name: "Peripheral Management", level: "Advanced Beginner" },
-          { name: "PC Upgrades", level: "Advanced Beginner" },
         ],
       },
       {
@@ -215,7 +214,7 @@ export const portfolioData: CandidateProfile = {
           { name: "Wi-Fi Setup & Optimization", level: "Advanced Beginner" },
           { name: "Network Security", level: "Advanced Beginner" },
           { name: "Firewall", level: "Advanced Beginner" },
-          { name: "Basic Network Monitoring", level: "Advanced Beginner" },
+          { name: "Network Monitoring", level: "Advanced Beginner" },
         ],
       },
       {
@@ -240,7 +239,9 @@ export const portfolioData: CandidateProfile = {
           { name: "OWASP Top 10 (IDOR)", level: "Advanced Beginner" },
           { name: "BurpSuite Community", level: "Advanced Beginner" },
           { name: "Nmap", level: "Advanced Beginner" },
-          { name: "JADX", level: "Novice" },
+          { name: "JadX", level: "Novice" },
+          { name: "Subfinder", level: "Advanced Beginner" },
+          { name: "Httpx", level: "Advanced Beginner" },
         ],
       },
 
