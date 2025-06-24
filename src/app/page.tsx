@@ -48,7 +48,7 @@ export default function Home() {
           {/* Outer container for grid layout and max width on XL screens */}
           <div className="relative lg:col-span-2 xl:w-96 animate-fadeInUp">
             {/* Middle container for border, padding, aspect ratio, shape, and shadow. Centered if xl:w-96 is larger. */}
-            <div className="aspect-video md:aspect-square p-1 border-4 border-border rounded-full shadow-2xl mx-auto max-w-full">
+            <div className="aspect-video md:aspect-square p-1 border-4 border-primary/10 rounded-full shadow-2xl mx-auto max-w-full">
               {/* Inner container for the image itself, to ensure it's clipped round and fills the padded area */}
               <div className="relative w-full h-full rounded-full overflow-hidden">
                 <Image
@@ -89,25 +89,27 @@ export default function Home() {
       </section>
       
       {/* Brief Experience Overview Section */}
-      <section id="brief-experience" className="py-16 md:py-24">
-         <div className="container mx-auto px-4 md:px-6">
-          <SectionTitle>Career Highlights</SectionTitle>
-          <div className="space-y-8">
-            {workExperience.slice(0, 2).map((exp, index) => (
-               <div key={exp.id} className="animate-fadeInUp" style={{ animationDelay: `${index * 0.1}s` }}>
-                <ExperienceCard experience={exp} defaultOpen={index === 0} />
-               </div>
-            ))}
+      <div className="bg-muted">
+        <section id="brief-experience" className="py-16 md:py-24">
+           <div className="container mx-auto px-4 md:px-6">
+            <SectionTitle>Career Highlights</SectionTitle>
+            <div className="space-y-8">
+              {workExperience.slice(0, 2).map((exp, index) => (
+                 <div key={exp.id} className="animate-fadeInUp" style={{ animationDelay: `${index * 0.1}s` }}>
+                  <ExperienceCard experience={exp} defaultOpen={index === 0} />
+                 </div>
+              ))}
+            </div>
+            <div className="text-center mt-12">
+              <Button asChild size="lg">
+                <Link href="/experience">
+                  View Full Experience <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+            </div>
           </div>
-          <div className="text-center mt-12">
-            <Button asChild size="lg">
-              <Link href="/experience">
-                View Full Experience <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
     </PageWrapper>
   );

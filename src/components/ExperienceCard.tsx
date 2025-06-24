@@ -12,7 +12,7 @@ interface ExperienceCardProps {
 
 export default function ExperienceCard({ experience, defaultOpen = false }: ExperienceCardProps) {
   return (
-    <Card className="w-full shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card">
+    <Card className="w-full shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card border">
       <CardHeader className="pb-3">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <div className="flex items-center gap-4">

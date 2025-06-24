@@ -12,7 +12,7 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <Card className="flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 bg-card">
+    <Card className="group flex flex-col h-full overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2 bg-card">
       <CardHeader className="p-0">
         <div className="relative aspect-video w-full overflow-hidden">
           <Image
@@ -33,7 +33,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </CardDescription>
         <div className="flex flex-wrap gap-2 mb-4">
           {project.technologies.map((tech) => (
-            <Badge key={tech} variant="secondary" className="bg-secondary text-secondary-foreground font-medium">
+            <Badge key={tech} variant="secondary" className="bg-secondary/50 border border-secondary text-secondary-foreground font-medium">
               {tech}
             </Badge>
           ))}
