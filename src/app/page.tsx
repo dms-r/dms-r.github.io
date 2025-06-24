@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import PageWrapper from '@/components/layout/PageWrapper';
 import SectionTitle from '@/components/SectionTitle';
 import { portfolioData } from '@/data/portfolioData';
-import { ArrowRight, Users } from 'lucide-react'; // Changed Shapes to Users
+import { ArrowRight, Users, FileText } from 'lucide-react'; // Changed Shapes to Users
 import ProjectCard from '@/components/ProjectCard';
 import ExperienceCard from '@/components/ExperienceCard';
 
@@ -27,7 +27,7 @@ export default function Home() {
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
               {bio}
             </p>
-            <div className="flex flex-col items-center sm:flex-row sm:justify-center md:justify-start gap-4">
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-4">
               <Button asChild size="lg" className="shadow-lg hover:shadow-xl transition-shadow">
                 <Link href="/projects">
                   View My Work <ArrowRight className="ml-2 h-5 w-5" />
@@ -36,6 +36,11 @@ export default function Home() {
               <Button variant="outline" size="lg" asChild className="border-primary text-foreground hover:bg-accent hover:text-accent-foreground dark:border-secondary dark:text-foreground dark:hover:bg-secondary/20 dark:hover:text-foreground shadow-lg hover:shadow-xl transition-shadow">
                 <Link href="/skills"> 
                   View Skills <Users className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+              <Button variant="secondary" size="lg" asChild className="shadow-lg hover:shadow-xl transition-shadow">
+                <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                  View Resume <FileText className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
             </div>
