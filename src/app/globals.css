@@ -68,7 +68,7 @@ h1, h2, h3, h4, h5, h6 {
     --primary-foreground: 227 30% 15%; /* Dark Navy for text on primary */
 
     --secondary: 190 28% 57%; /* Darker Muted Teal (for Download CV button border, badge bg) */
-    --secondary-foreground: 227 30% 15%; /* Dark Navy for text on secondary (Updated for badge readability) */
+    --secondary-foreground: 220 13% 90%; /* Light Gray for text on secondary */
 
     --muted: 227 30% 25%;
     --muted-foreground: 220 10% 60%;
