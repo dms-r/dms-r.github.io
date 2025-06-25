@@ -39,6 +39,12 @@ const blogLink = {
   icon: <BookOpen className="mr-2 h-5 w-5" />, 
   target: '_blank' 
 };
+const docsLink = {
+  href: 'https://docs.dpublic.my.id/',
+  label: 'My Docs',
+  icon: <BookOpen className="mr-2 h-5 w-5" />,
+  target: '_blank'
+};
 const contactLink = { href: '/contact', label: 'Contact', icon: <Mail className="mr-2 h-5 w-5" /> };
 
 const navLinks = [
@@ -160,6 +166,7 @@ export default function Header() {
 
           <NavButton href={projectsLink.href} label={projectsLink.label} />
           <ExternalNavButton href={blogLink.href} label={blogLink.label} />
+          <ExternalNavButton href={docsLink.href} label={docsLink.label} />
           <NavButton href={contactLink.href} label={contactLink.label} />
           
           <ThemeToggle className="ml-2" />
@@ -207,6 +214,7 @@ export default function Header() {
                 
                 <MobileNavLink href={projectsLink.href} label={projectsLink.label} icon={projectsLink.icon} onClose={() => setIsSheetOpen(false)} />
                 <MobileExternalNavLink href={blogLink.href} label={blogLink.label} icon={blogLink.icon} target={blogLink.target} onClose={() => setIsSheetOpen(false)} />
+                <MobileExternalNavLink href={docsLink.href} label={docsLink.label} icon={docsLink.icon} target={docsLink.target} onClose={() => setIsSheetOpen(false)} />
                 <MobileNavLink href={contactLink.href} label={contactLink.label} icon={contactLink.icon} onClose={() => setIsSheetOpen(false)} />
               </div>
             </SheetContent>
