@@ -17,7 +17,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Menu, Briefcase, Code, Lightbulb, Users, Mail, GraduationCap, ChevronDown, BookOpen } from 'lucide-react';
+import { Menu, Briefcase, Code, Lightbulb, Users, Mail, GraduationCap, ChevronDown, BookOpen, FileText } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { ThemeToggle } from '@/components/ThemeToggle';
@@ -33,27 +33,24 @@ const aboutMeLinks = [
 ];
 
 const projectsLink = { href: '/projects', label: 'Projects', icon: <Code className="mr-2 h-5 w-5" /> };
-const blogLink = { 
-  href: 'https://blog.dpublic.my.id/', 
-  label: 'Blog', 
-  icon: <BookOpen className="mr-2 h-5 w-5" />, 
-  target: '_blank' 
-};
-const docsLink = {
-  href: 'https://docs.dpublic.my.id/',
-  label: 'My Docs',
-  icon: <BookOpen className="mr-2 h-5 w-5" />,
-  target: '_blank'
-};
 const contactLink = { href: '/contact', label: 'Contact', icon: <Mail className="mr-2 h-5 w-5" /> };
 
-const navLinks = [
-  homeLink,
-  // "About Me" is handled separately
-  projectsLink,
-  blogLink,
-  contactLink,
+const resourcesTitle = 'Resources';
+const resourcesLinks = [
+  { 
+    href: 'https://blog.dpublic.my.id/', 
+    label: 'Blog', 
+    icon: <BookOpen className="mr-2 h-5 w-5" />, 
+    target: '_blank' 
+  },
+  {
+    href: 'https://docs.dpublic.my.id/',
+    label: 'My Docs',
+    icon: <FileText className="mr-2 h-5 w-5" />,
+    target: '_blank'
+  }
 ];
+
 
 export default function Header() {
   const [isSheetOpen, setIsSheetOpen] = useState(false);
@@ -88,16 +85,6 @@ export default function Header() {
       )}
     >
       <Link href={href}>{label}</Link>
-    </Button>
-  );
-
-  const ExternalNavButton = ({ href, label }: { href: string; label: string }) => (
-     <Button
-      variant="ghost"
-      asChild
-      className="text-sm font-medium text-foreground/80 hover:text-foreground hover:bg-muted transition-colors px-3 lg:px-4 py-2"
-    >
-      <Link href={href} target="_blank" rel="noopener noreferrer">{label}</Link>
     </Button>
   );
   
@@ -165,8 +152,26 @@ export default function Header() {
           </DropdownMenu>
 
           <NavButton href={projectsLink.href} label={projectsLink.label} />
-          <ExternalNavButton href={blogLink.href} label={blogLink.label} />
-          <ExternalNavButton href={docsLink.href} label={docsLink.label} />
+          
+          {/* Resources Dropdown */}
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" className="flex items-center text-sm font-medium text-foreground/80 hover:text-foreground hover:bg-muted transition-colors px-3 lg:px-4 py-2">
+                {resourcesTitle} <ChevronDown className="ml-1 h-4 w-4" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              {resourcesLinks.map(link => (
+                <DropdownMenuItem key={link.href} asChild>
+                  <Link href={link.href} target={link.target} rel="noopener noreferrer" className="flex items-center gap-2">
+                    {link.icon}
+                    {link.label}
+                  </Link>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+
           <NavButton href={contactLink.href} label={contactLink.label} />
           
           <ThemeToggle className="ml-2" />
@@ -213,8 +218,26 @@ export default function Header() {
                 </Accordion>
                 
                 <MobileNavLink href={projectsLink.href} label={projectsLink.label} icon={projectsLink.icon} onClose={() => setIsSheetOpen(false)} />
-                <MobileExternalNavLink href={blogLink.href} label={blogLink.label} icon={blogLink.icon} target={blogLink.target} onClose={() => setIsSheetOpen(false)} />
-                <MobileExternalNavLink href={docsLink.href} label={docsLink.label} icon={docsLink.icon} target={docsLink.target} onClose={() => setIsSheetOpen(false)} />
+
+                {/* Resources Accordion for mobile */}
+                <Accordion type="single" collapsible className="w-full">
+                  <AccordionItem value="resources" className="border-b-0">
+                    <AccordionTrigger
+                      className={cn(
+                        "flex w-full items-center rounded-md p-3 text-base font-medium transition-colors hover:bg-muted hover:no-underline justify-start text-muted-foreground hover:text-foreground"
+                      )}
+                    >
+                      <BookOpen className="mr-2 h-5 w-5" />
+                      {resourcesTitle}
+                    </AccordionTrigger>
+                    <AccordionContent className="pl-4 pt-1">
+                      {resourcesLinks.map((link) => (
+                        <MobileExternalNavLink key={link.href} href={link.href} label={link.label} icon={link.icon} target={link.target} onClose={() => setIsSheetOpen(false)} />
+                      ))}
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+
                 <MobileNavLink href={contactLink.href} label={contactLink.label} icon={contactLink.icon} onClose={() => setIsSheetOpen(false)} />
               </div>
             </SheetContent>
